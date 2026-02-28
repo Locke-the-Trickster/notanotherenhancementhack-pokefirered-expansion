@@ -3263,6 +3263,7 @@ BattleScript_EffectForesight::
 	accuracycheck BattleScript_ButItFailed
 	jumpifgenconfiglowerthan CONFIG_FORESIGHT_FAIL, GEN_3, BattleScript_ForesightFailCheck
 	jumpifgenconfiglowerthan CONFIG_FORESIGHT_FAIL, GEN_5, BattleScript_ForesightSet
+	goto BattleScript_EffectAccuracyUp
 BattleScript_ForesightFailCheck:
 	jumpifvolatile BS_TARGET, VOLATILE_FORESIGHT, BattleScript_ButItFailed
 BattleScript_ForesightSet:

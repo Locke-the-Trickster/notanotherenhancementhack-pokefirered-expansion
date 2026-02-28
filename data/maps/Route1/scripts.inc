@@ -4,20 +4,20 @@ Route1_MapScripts::
 Route1_EventScript_MartClerk::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_POTION_ON_ROUTE_1, Route1_EventScript_AlreadyGotPotion
+	goto_if_set FLAG_GOT_ORAN_BERRY_ON_ROUTE_1, Route1_EventScript_AlreadyGotPotion
 	msgbox Route1_Text_WorkAtPokeMartTakeSample
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	checkitemspace ITEM_POTION
+	checkitemspace ITEM_ORAN_BERRY
 	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
-	bufferitemname STR_VAR_2, ITEM_POTION
+	bufferitemname STR_VAR_2, ITEM_ORAN_BERRY
 	playfanfare MUS_LEVEL_UP
 	message Text_ObtainedTheX
 	waitmessage
 	waitfanfare
-	additem ITEM_POTION
+	additem ITEM_ORAN_BERRY
 	msgbox Route1_Text_PutPotionAway
 	call EventScript_RestorePrevTextColor
-	setflag FLAG_GOT_POTION_ON_ROUTE_1
+	setflag FLAG_GOT_ORAN_BERRY_ON_ROUTE_1
 	release
 	end
 

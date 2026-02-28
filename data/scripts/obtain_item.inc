@@ -246,3 +246,37 @@ EventScript_NoCaseForHiddenCoins::
 	setvar VAR_RESULT, 0
 	releaseall
 	end
+
+RelearnerKitScript::
+    lock
+    msgbox Text_RelearnerKit_Confirm, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, RelearnerKit_End
+    goto RelearnerKit_ChooseMon
+
+RelearnerKit_ChooseMon::
+    special ChooseMonForMoveRelearner
+    waitstate
+    goto_if_ge VAR_0x8004, PARTY_SIZE, RelearnerKit_End
+
+    special IsSelectedMonEgg
+    goto_if_eq VAR_RESULT, TRUE, RelearnerKit_CannotTutorEgg
+
+    goto_if_eq VAR_0x8005, 0, RelearnerKit_NoMove
+    goto RelearnerKit_ChooseMove
+
+RelearnerKit_CannotTutorEgg::
+    msgbox Text_RelearnerKit_CannotTutorEgg
+    goto RelearnerKit_ChooseMon
+
+RelearnerKit_NoMove::
+    msgbox Text_RelearnerKit_NoMove
+    goto RelearnerKit_ChooseMon
+
+RelearnerKit_ChooseMove::
+    special TeachMoveRelearnerMove
+    waitstate
+    goto RelearnerKit_ChooseMon
+
+RelearnerKit_End::
+    release
+    end

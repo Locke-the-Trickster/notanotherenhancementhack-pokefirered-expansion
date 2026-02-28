@@ -1,0 +1,32 @@
+{
+  "id": "MAP_PALLET_RIVER",
+  "name": "PalletRiver",
+  "layout": "LAYOUT_PALLET_RIVER",
+  "music": "MUS_PALLET",
+  "region_map_section": "MAPSEC_PALLET_RIVER",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PALLET_TOWN",
+      "offset": 20,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE1",
+      "offset": -20,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

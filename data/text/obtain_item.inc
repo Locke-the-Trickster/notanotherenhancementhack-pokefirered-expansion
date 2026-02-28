@@ -49,3 +49,13 @@ Text_NoRoomForAnotherDecor::
 Text_DecorTransferredToPC::
 	.string "The {STR_VAR_2} was transferred\n"
 	.string "to the PC.$"
+
+Text_RelearnerKit_Confirm::
+	.string "Do you want to relearn\n"
+	.string "a move?$"
+
+Text_RelearnerKit_CannotTutorEgg::
+    .string "You cannot tutor an egg.$"
+
+Text_RelearnerKit_NoMove::
+    .string "No move to tutor.$"

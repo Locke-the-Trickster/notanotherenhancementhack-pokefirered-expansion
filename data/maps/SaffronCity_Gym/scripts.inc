@@ -5,7 +5,8 @@ SaffronCity_Gym_EventScript_Sabrina::
 	famechecker FAMECHECKER_SABRINA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_SABRINA, SaffronCity_Gym_Text_SabrinaIntro, SaffronCity_Gym_Text_SabrinaDefeat, SaffronCity_Gym_EventScript_DefeatedSabrina, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM04_FROM_SABRINA, SaffronCity_Gym_EventScript_GiveTM04
-	msgbox SaffronCity_Gym_Text_ExplainTM04
+	goto_if_unset FLAG_GOT_HM05, SaffronCity_Gym_EventScript_StrengthQuestExplain
+	goto_if_set FLAG_GOT_HM05, SaffronCity_Gym_EventScript_ExplainTM04
 	release
 	end
 
@@ -93,4 +94,12 @@ SaffronCity_Gym_EventScript_GymStatue::
 SaffronCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox SaffronCity_Gym_Text_GymStatuePlayerWon
 	releaseall
+	end
+
+SaffronCity_Gym_EventScript_StrengthQuestExplain::
+	msgbox SaffronCity_Gym_Text_ExplainStrengthQuest
+	end
+
+SaffronCity_Gym_EventScript_ExplainTM04::
+	msgbox SaffronCity_Gym_Text_ExplainTM04
 	end

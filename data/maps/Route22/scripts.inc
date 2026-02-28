@@ -40,6 +40,8 @@ Route22_EventScript_EarlyRival::
 	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_EarlyRivalExit
 	call_if_eq VAR_TEMP_1, 1, Route22_EventScript_EarlyRivalExit
 	call_if_eq VAR_TEMP_1, 2, Route22_EventScript_EarlyRivalExitBottom
+	setflag FLAG_RT22_RIVAL
+	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1
 	fadedefaultbgm
 	removeobject LOCALID_ROUTE22_RIVAL
 	setvar VAR_MAP_SCENE_ROUTE22, 2

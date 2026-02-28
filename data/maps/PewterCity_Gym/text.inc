@@ -22,12 +22,10 @@ PewterCity_Gym_Text_BrockDefeat::
     .string "LEAGUE BOULDERBADGE.\p"
     .string "{FONT_NORMAL}{PLAYER} received the BOULDERBADGE\n"
     .string "from BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
-    .string "{FONT_MALE}Just having the BOULDERBADGE makes\n"
-    .string "your POKéMON more powerful.\p"
-    .string "It also enables the use of the\n"
-    .string "move FLASH outside of battle.\p"
+    .string "{FONT_MALE}It enables the use of the\n"
+    .string "move ROCK SMASH outside of battle.\p"
     .string "Of course, a POKéMON must know the\n"
-    .string "move FLASH to use it.$"
+    .string "move ROCK SMASH to use it.$"
 
 PewterCity_Gym_Text_TakeThisWithYou::
     .string "Wait!\n"

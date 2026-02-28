@@ -81,7 +81,9 @@ static void Task_UseFameCheckerFromField(u8 taskId);
 static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
 static bool8 TryToWaterSudowoodo(void);
-
+//PokeVial and Relearner Kit variables to point to C code that heals party pkmn_center_nurse.inc
+extern const u8 PokeVialHealScript[];
+extern const u8 RelearnerKitScript[];
 
 // Below is set TRUE by UseRegisteredKeyItemOnField
 #define tUsingRegisteredKeyItem  data[3]
@@ -422,8 +424,98 @@ void ItemUseOutOfBattle_PokemonBoxLink(u8 taskId)
 
 static void Task_AccessPokemonBoxLink(u8 taskId)
 {
-    ScriptContext_SetupScript(EventScript_AccessPokemonBoxLink);
+    bool8 usingRegistered = gTasks[taskId].tUsingRegisteredKeyItem;
+
+    // Block usage during gauntlet
+    if (FlagGet(FLAG_SYS_GAUNTLET))
+    {
+        PrintNotTheTimeToUseThat(taskId, usingRegistered);
+    }
+    else
+    {
+        // Run the normal Box Link script
+        ScriptContext_SetupScript(EventScript_AccessPokemonBoxLink);
+    }
+
+    // Always destroy the task
     DestroyTask(taskId);
+}
+
+//PokeVialFunctions
+
+void ItemUseCB_PokeVial(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(PokeVialHealScript);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_PokeVial(u8 taskId)
+{
+    // Block usage during gauntlet
+    if (FlagGet(FLAG_SYS_GAUNTLET))
+    {
+        PrintNotTheTimeToUseThat(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+        return;
+    }
+
+    // Allowed to use the item
+    sItemUseOnFieldCB = ItemUseCB_PokeVial;
+    SetUpItemUseOnFieldCallback(taskId);
+
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        Task_FadeAndCloseBagMenu(taskId);  // Close the bag if used from the bag
+}
+
+//Repellant Functions
+
+void ItemUseOutOfBattle_Repellent(u8 taskId)
+{
+    const u8 *repellentText;
+
+    if (FlagGet(FLAG_REPEL_TOGGLE))
+    {
+        FlagClear(FLAG_REPEL_TOGGLE);
+        VarSet(VAR_REPEL_STEP_COUNT, 0);
+        repellentText = gText_RepellantInactive;
+    }
+    else
+    {
+        FlagSet(FLAG_REPEL_TOGGLE);
+        VarSet(VAR_REPEL_STEP_COUNT, 1);
+        repellentText = gText_RepellantActive;
+    }
+
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        DisplayItemMessage(taskId, FONT_NORMAL, repellentText, CloseItemMessage);
+    else
+        DisplayItemMessageOnField(taskId, FONT_NORMAL, repellentText, Task_ItemUse_CloseMessageBoxAndReturnToField);
+}
+
+//Relearner Kit functions
+static void ItemUseCB_RelearnerKit(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(RelearnerKitScript);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_RelearnerKit(u8 taskId)
+{
+    if (gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        DisplayItemMessageOnField(taskId, FONT_NORMAL, gText_OakForbidsUseOfItemHere, Task_ItemUse_CloseMessageBoxAndReturnToField);
+        return;
+    }
+    //block usage during gauntlet
+    if (FlagGet(FLAG_SYS_GAUNTLET))
+    {
+        PrintNotTheTimeToUseThat(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+        return;
+    }
+    sItemUseOnFieldCB = ItemUseCB_RelearnerKit;
+    SetUpItemUseOnFieldCallback(taskId);
+    Task_FadeAndCloseBagMenu(taskId);
 }
 
 #define tIsFieldUse data[3]
@@ -652,6 +744,20 @@ void ItemUseOutOfBattle_PPRecovery(u8 taskId)
 void ItemUseOutOfBattle_PPUp(u8 taskId)
 {
     gItemUseCB = ItemUseCB_PPUp;
+    DoSetUpItemUseCallback(taskId);
+}
+
+//Level Up Key Item
+
+void ItemUseOutOfBattle_LevelUp(u8 taskId)
+{
+    if (gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        DisplayItemMessageOnField(taskId, FONT_NORMAL, gText_OakForbidsUseOfItemHere, Task_ItemUse_CloseMessageBoxAndReturnToField);
+        return;
+    }
+
+    gItemUseCB = ItemUseCB_RareCandy;
     DoSetUpItemUseCallback(taskId);
 }
 

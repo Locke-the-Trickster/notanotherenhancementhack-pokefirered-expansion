@@ -4,30 +4,30 @@ VermilionCity_House1_MapScripts::
 VermilionCity_House1_EventScript_FishingGuru::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_OLD_ROD, VermilionCity_House1_EventScript_AlreadyGotOldRod
+	goto_if_set FLAG_GOT_TM_CHILLING_WATER, VermilionCity_House1_EventScript_AlreadyGotTM54
 	msgbox VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, VermilionCity_House1_EventScript_GiveOldRod
+	goto_if_eq VAR_RESULT, YES, VermilionCity_House1_EventScript_GiveTM54
 	msgbox VermilionCity_House1_Text_OhThatsSoDisappointing
 	release
 	end
 
-VermilionCity_House1_EventScript_AlreadyGotOldRod::
+VermilionCity_House1_EventScript_AlreadyGotTM54::
 	msgbox VermilionCity_House1_Text_HowAreTheFishBiting
 	release
 	end
 
-VermilionCity_House1_EventScript_GiveOldRod::
-	checkitemspace ITEM_OLD_ROD
-	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House1_EventScript_NoRoomForOldRod
-	additem ITEM_OLD_ROD
+VermilionCity_House1_EventScript_GiveTM54::
+	checkitemspace ITEM_TM54
+	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House1_EventScript_NoRoomForTM54
+	additem ITEM_TM54
 	msgbox VermilionCity_House1_Text_TakeThisAndFish
-	msgreceiveditem VermilionCity_House1_Text_ReceivedOldRodFromFishingGuru, ITEM_OLD_ROD
-	setflag FLAG_GOT_OLD_ROD
+	msgreceiveditem VermilionCity_House1_Text_ReceivedTM54FromFishingGuru, ITEM_TM54
+	setflag FLAG_GOT_TM_CHILLING_WATER
 	msgbox VermilionCity_House1_Text_FishingIsAWayOfLife
 	release
 	end
 
-VermilionCity_House1_EventScript_NoRoomForOldRod::
+VermilionCity_House1_EventScript_NoRoomForTM54::
 	msgbox VermilionCity_House1_Text_NoRoomForNiceGift
 	release
 	end

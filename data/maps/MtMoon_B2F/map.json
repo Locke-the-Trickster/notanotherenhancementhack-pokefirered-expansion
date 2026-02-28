@@ -127,8 +127,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtMoon_B2F_EventScript_ItemStarPiece",
-      "flag": "FLAG_HIDE_MT_MOON_B2F_STAR_PIECE"
+      "script": "MtMoon_B2F_EventScript_ItemEverstone",
+      "flag": "FLAG_HIDE_MT_MOON_B2F_EVERSTONE"
     },
     {
       "type": "object",
@@ -155,8 +155,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtMoon_B2F_EventScript_ItemRevive",
-      "flag": "FLAG_HIDE_MT_MOON_B2F_REVIVE"
+      "script": "MtMoon_B2F_EventScript_ItemFireStone",
+      "flag": "FLAG_HIDE_MT_MOON_B2F_FIRE_STONE"
     },
     {
       "type": "object",
@@ -169,8 +169,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtMoon_B2F_EventScript_ItemAntidote",
-      "flag": "FLAG_HIDE_MT_MOON_B2F_ANTIDOTE"
+      "script": "MtMoon_B2F_EventScript_ItemStarPiece",
+      "flag": "FLAG_HIDE_MT_MOON_B2F_STAR_PIECE"
     }
   ],
   "warp_events": [
@@ -230,8 +230,8 @@
       "x": 39,
       "y": 11,
       "elevation": 3,
-      "item": "ITEM_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER",
+      "item": "ITEM_MAGMARIZER",
+      "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B2F_MAGMARIZER",
       "quantity": 1,
       "underfoot": false
     }

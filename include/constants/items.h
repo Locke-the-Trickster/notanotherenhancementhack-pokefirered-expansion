@@ -1051,6 +1051,12 @@ enum __attribute__((packed)) Item
     ITEM_TATSUGIRINITE = 872,
     ITEM_GLIMMORANITE = 873,
 
+    //Custom Key Items
+    ITEM_POKE_VIAL = 874,
+    ITEM_REPELLENT = 875,
+    ITEM_LEVELUP = 876,
+    ITEM_RELEARNER_KIT = 877,
+
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };

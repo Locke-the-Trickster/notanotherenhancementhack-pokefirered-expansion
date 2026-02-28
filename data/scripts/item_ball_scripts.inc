@@ -3,52 +3,56 @@ Common_EventScript_FindItem::
 	finditem VAR_RESULT VAR_0x8009
 	end
 
-Route2_EventScript_ItemEther::
-	finditem ITEM_ETHER
+Route2_EventScript_ItemSoftSand::
+	finditem ITEM_SOFT_SAND
 	end
 
-Route2_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+Route2_EventScript_ItemMetronome::
+	finditem ITEM_METRONOME
 	end
 
-ViridianForest_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_BALL
+ViridianForest_EventScript_ItemNetBall::
+	finditem ITEM_NET_BALL
 	end
 
-ViridianForest_EventScript_ItemAntidote::
-	finditem ITEM_ANTIDOTE
+ViridianForest_EventScript_ItemLeafStone::
+	finditem ITEM_LEAF_STONE
 	end
 
-ViridianForest_EventScript_ItemPotion::
-	finditem ITEM_POTION
+ViridianForest_EventScript_ItemSilverPowder::
+	finditem ITEM_SILVER_POWDER
 	end
 
-MtMoon_1F_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+Route4_EventScript_ItemTM52::
+	finditem ITEM_TM52
 	end
 
-MtMoon_1F_EventScript_ItemTM09::
-	finditem ITEM_TM09
+MtMoon_1F_EventScript_ItemMoonStone2::
+	finditem ITEM_MOON_STONE
 	end
 
-MtMoon_1F_EventScript_ItemPotion::
-	finditem ITEM_POTION
+MtMoon_1F_EventScript_ItemTM53::
+	finditem ITEM_TM53
 	end
 
-MtMoon_1F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+MtMoon_1F_EventScript_ItemDuskStone::
+	finditem ITEM_DUSK_STONE
 	end
 
-MtMoon_1F_EventScript_ItemEscapeRope::
-	finditem ITEM_ESCAPE_ROPE
+MtMoon_1F_EventScript_ItemShinyStone::
+	finditem ITEM_SHINY_STONE
+	end
+
+MtMoon_1F_EventScript_ItemDawnStone::
+	finditem ITEM_DAWN_STONE
 	end
 
 MtMoon_1F_EventScript_ItemMoonStone::
 	finditem ITEM_MOON_STONE
 	end
 
-MtMoon_B2F_EventScript_ItemStarPiece::
-	finditem ITEM_STAR_PIECE
+MtMoon_B2F_EventScript_ItemEverstone::
+	finditem ITEM_EVERSTONE
 	end
 
 MtMoon_B2F_EventScript_ItemTM46::
@@ -71,28 +75,48 @@ SSAnne_1F_Room2_EventScript_ItemTM31::
 	finditem ITEM_TM31
 	end
 
-SSAnne_2F_Room2_EventScript_ItemStardust::
-	finditem ITEM_STARDUST
+SSAnne_1F_Room5_EventScript_ItemPoisonBarb::
+	finditem ITEM_POISON_BARB
 	end
 
-SSAnne_2F_Room4_EventScript_ItemXAttack::
-	finditem ITEM_X_ATTACK
+SSAnne_1F_Room7_EventScript_ItemCharcoal::
+	finditem ITEM_CHARCOAL
+	end
+
+SSAnne_2F_Room2_EventScript_ItemTMSteelWing::
+	finditem ITEM_TM47
+	end
+
+SSAnne_2F_Room4_EventScript_ItemMiracleSeed::
+	finditem ITEM_MIRACLE_SEED
+	end
+
+SSAnne_B1F_Room1_EventScript_ItemAdamantMint::
+	finditem ITEM_ADAMANT_MINT
 	end
 
 SSAnne_B1F_Room2_EventScript_ItemTM44::
 	finditem ITEM_TM44
 	end
 
-SSAnne_B1F_Room3_EventScript_ItemEther::
-	finditem ITEM_ETHER
+SSAnne_B1F_Room3_EventScript_ItemNeverMeltIce::
+	finditem ITEM_NEVER_MELT_ICE
 	end
 
-SSAnne_B1F_Room5_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
+SSAnne_B1F_Room4_EventScript_ItemMysticWater::
+	finditem ITEM_MYSTIC_WATER
 	end
 
-SSAnne_Kitchen_EventScript_ItemGreatBall::
-	finditem ITEM_GREAT_BALL
+SSAnne_B1F_Room5_EventScript_ItemMagnet::
+	finditem ITEM_MAGNET
+	end
+
+SSAnne_Kitchen_EventScript_ItemSilkScarf::
+	finditem ITEM_SILK_SCARF
+	end
+
+SSAnne_Deck_EventScript_ItemModestMint::
+	finditem ITEM_MODEST_MINT
 	end
 
 Route9_EventScript_ItemTM40::
@@ -415,16 +439,16 @@ ThreeIsland_EventScript_ItemZinc::
 	finditem ITEM_ZINC
 	end
 
-ViridianForest_EventScript_ItemPotion2::
-	finditem ITEM_POTION
+ViridianForest_EventScript_ItemPechaBerry::
+	finditem ITEM_PECHA_BERRY
 	end
 
-MtMoon_B2F_EventScript_ItemRevive::
-	finditem ITEM_REVIVE
+MtMoon_B2F_EventScript_ItemFireStone::
+	finditem ITEM_FIRE_STONE
 	end
 
-MtMoon_B2F_EventScript_ItemAntidote::
-	finditem ITEM_ANTIDOTE
+MtMoon_B2F_EventScript_ItemStarPiece::
+	finditem ITEM_STAR_PIECE
 	end
 
 Route11_EventScript_ItemXDefend::
@@ -475,8 +499,8 @@ PokemonMansion_2F_EventScript_ItemHPUp::
 	finditem ITEM_HP_UP
 	end
 
-ViridianCity_EventScript_ItemPotion::
-	finditem ITEM_POTION
+ViridianCity_EventScript_ItemQuickPowder::
+	finditem ITEM_QUICK_POWDER
 	end
 
 Route11_EventScript_ItemGreatBall::

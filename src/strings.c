@@ -1618,3 +1618,7 @@ const u8 gText_BattleArenaDesc[] = _("Win battles with teamed-up POKéMON!\nYour
 const u8 gText_BattleFactoryDesc[] = _("Aim for victory using rental POKéMON!\nYour knowledge will be tested.");
 const u8 gText_BattlePikeDesc[] = _("Select one of three paths to battle!\nYour luck will be tested.");
 const u8 gText_BattlePyramidDesc[] = _("Aim for the top with exploration!\nYour bravery will be tested.");
+
+// Added Item Strings
+const u8 gText_RepellantActive[] = _("POKéMON are now repelled.");
+const u8 gText_RepellantInactive[] = _("POKéMON are no longer repelled.");

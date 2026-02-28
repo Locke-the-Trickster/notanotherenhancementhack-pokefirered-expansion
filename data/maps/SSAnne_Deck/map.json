@@ -18,14 +18,14 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 12,
-      "y": 10,
+      "x": 8,
+      "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "5",
       "script": "SSAnne_Deck_EventScript_Trevor",
       "flag": "0"
     },
@@ -61,13 +61,13 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 6,
-      "y": 9,
+      "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "SSAnne_Deck_EventScript_Edmond",
       "flag": "0"
     },
@@ -84,6 +84,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SSAnne_Deck_EventScript_Youngster",
       "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 2,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SSAnne_Deck_EventScript_ItemModestMint",
+      "flag": "FLAG_HIDE_SSANNE_DECK_MODEST_MINT"
     }
   ],
   "warp_events": [

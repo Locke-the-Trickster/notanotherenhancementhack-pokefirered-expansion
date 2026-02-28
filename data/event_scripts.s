@@ -977,6 +977,9 @@ Text_RestoredPkmnToFullHealth::
 	.string "We've restored your POKéMON to\l"
 	.string "full health.$"
 
+Text_PokeVialText::
+	.string "Party POKéMON healed.$"
+
 	.include "data/text/surf.inc"
 
 @ Unused, from R/S
@@ -1088,8 +1091,9 @@ Text_MoveCanOnlyBeLearnedOnce::
 EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_OAK_IN_HIS_LAB
 	setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
+	setflag FLAG_HIDE_MOM_PALLET
 	setflag FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE
-	setflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
+	setflag FLAG_HIDE_PEWTER_CITY_HM05_HM06_AIDE
 	setflag FLAG_HIDE_POKEHOUSE_FUJI
 	setflag FLAG_HIDE_LIFT_KEY
 	setflag FLAG_HIDE_SILPH_SCOPE
@@ -1412,3 +1416,9 @@ Text_TestMsg::
 	.include "data/scripts/dexnav.inc"
 	.include "data/text/apprentice.inc"
 	.include "data/text/tv.inc"
+
+	.include "data/maps/PalletRiver/scripts.inc"
+	.include "data/maps/PalletRiver/text.inc"
+
+	.include "data/maps/HiddenMeadow/scripts.inc"
+	.include "data/maps/HiddenMeadow/text.inc"

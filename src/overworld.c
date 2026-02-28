@@ -310,6 +310,7 @@ void Overworld_ResetStateAfterFly(void)
 {
     ResetInitialPlayerAvatarState();
     FlagClear(FLAG_SYS_ON_CYCLING_ROAD);
+    FlagClear(FLAG_SYS_GAUNTLET);
     VarSet(VAR_MAP_SCENE_ROUTE16, 0);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
@@ -324,6 +325,7 @@ void Overworld_ResetStateAfterTeleport(void)
 {
     ResetInitialPlayerAvatarState();
     FlagClear(FLAG_SYS_ON_CYCLING_ROAD);
+    FlagClear(FLAG_SYS_GAUNTLET);
     VarSet(VAR_MAP_SCENE_ROUTE16, 0);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
@@ -338,6 +340,7 @@ void Overworld_ResetStateAfterDigEscRope(void)
 {
     ResetInitialPlayerAvatarState();
     FlagClear(FLAG_SYS_ON_CYCLING_ROAD);
+    FlagClear(FLAG_SYS_GAUNTLET);
     VarSet(VAR_MAP_SCENE_ROUTE16, 0);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
@@ -372,6 +375,7 @@ static void Overworld_ResetStateAfterWhitingOut(void)
 {
     ResetInitialPlayerAvatarState();
     FlagClear(FLAG_SYS_ON_CYCLING_ROAD);
+    FlagClear(FLAG_SYS_GAUNTLET);
     VarSet(VAR_MAP_SCENE_ROUTE16, 0);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);

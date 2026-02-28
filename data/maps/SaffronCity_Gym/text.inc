@@ -158,3 +158,16 @@ SaffronCity_Gym_Text_GymStatuePlayerWon::
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
+SaffronCity_Gym_Text_ExplainStrengthQuest::
+    .string "To continue your journey to\n"
+    .string "the POKéMON LEAGUE, you must\n"
+    .string "go on a quest to find\n"
+    .string "the STRENGTH sensei.\p"
+    .string "He will teach your POKéMON the\n"
+    .string "STRENGTH to overcome large\n"
+    .string "boulders, which will obstruct\n"
+    .string "your path to INDIGO PLATEAU.\p"
+    .string "You can find him on ROUTE 11.\p"
+    .string "Travel east from FUCHSIA CITY\n"
+    .string "then north along the eastern\n"
+    .string "coastline of KANTO.$"

@@ -1,6 +1,6 @@
 VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish::
     .string "I'm the FISHING GURU!\p"
-    .string "I simply looove fishing!\n"
+    .string "I simply looove ice fishing!\n"
     .string "I can't bear to go without.\p"
     .string "Tell me, do you like to fish?$"
 
@@ -9,8 +9,8 @@ VermilionCity_House1_Text_TakeThisAndFish::
     .string "I think we can be friends.\p"
     .string "Take this and fish, young friend!$"
 
-VermilionCity_House1_Text_ReceivedOldRodFromFishingGuru::
-    .string "{PLAYER} received an OLD ROD from\n"
+VermilionCity_House1_Text_ReceivedTM54FromFishingGuru::
+    .string "{PLAYER} received an TM54 from\n"
     .string "the FISHING GURU.$"
 
 VermilionCity_House1_Text_FishingIsAWayOfLife::

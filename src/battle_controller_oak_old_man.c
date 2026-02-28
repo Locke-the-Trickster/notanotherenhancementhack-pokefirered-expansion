@@ -331,6 +331,7 @@ static void CompleteWhenChoseItem(enum BattlerId battler)
 {
     if (gMain.callback2 == BattleMainCB2 && !gPaletteFade.active)
     {
+        /*
         if (!BtlCtrl_OakOldMan_TestState2Flag(FIRST_BATTLE_MSG_FLAG_HP_RESTORE)
          && gSpecialVar_ItemId == ITEM_POTION
          && gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
@@ -343,6 +344,9 @@ static void CompleteWhenChoseItem(enum BattlerId battler)
             BtlController_EmitOneReturnValue(battler, 1, gSpecialVar_ItemId);
             OakOldManBufferExecCompleted(battler);
         }
+        */
+        BtlController_EmitOneReturnValue(battler, 1, gSpecialVar_ItemId);
+        OakOldManBufferExecCompleted(battler);
     }
 }
 
@@ -400,6 +404,8 @@ static void Intro_WaitForShinyAnimAndHealthbox(enum BattlerId battler)
 
 static void PrintOakText_ForPetesSake(enum BattlerId battler)
 {
+    OakOldManBufferExecCompleted(battler);
+    /*
     u32 mask;
 
     switch (gBattleStruct->simulatedInputState[0])
@@ -429,7 +435,7 @@ static void PrintOakText_ForPetesSake(enum BattlerId battler)
         ++gBattleStruct->simulatedInputState[0];
         break;
     case 3:
-        if (!IsTextPrinterActiveOnWindow(B_WIN_OAK_OLD_MAN))
+        if (!IsTextPrinterActive(B_WIN_OAK_OLD_MAN))
         {
             mask = (gBitTable[gBattleStruct->simulatedInputState[1]] | gBitTable[gBattleStruct->simulatedInputState[3]]) << 16;
             BeginNormalPaletteFade(mask,
@@ -449,9 +455,9 @@ static void PrintOakText_ForPetesSake(enum BattlerId battler)
         }
         break;
     case 5:
-        if (!IsTextPrinterActiveOnWindow(B_WIN_OAK_OLD_MAN))
+        if (!IsTextPrinterActive(B_WIN_OAK_OLD_MAN))
         {
-            mask = ((1 << gBattleStruct->simulatedInputState[1]) | (1 << gBattleStruct->simulatedInputState[3])) << 16;
+            mask = (gBitTable[gBattleStruct->simulatedInputState[1]] | gBitTable[gBattleStruct->simulatedInputState[3]]) << 16;
             BeginNormalPaletteFade(mask,
                                    4,
                                    0,
@@ -469,7 +475,7 @@ static void PrintOakText_ForPetesSake(enum BattlerId battler)
         }
         break;
     case 7:
-        if (!IsTextPrinterActiveOnWindow(B_WIN_OAK_OLD_MAN))
+        if (!IsTextPrinterActive(B_WIN_OAK_OLD_MAN))
         {
             BeginNormalPaletteFade(0xFFFFFF7E,
                                    4,
@@ -489,6 +495,7 @@ static void PrintOakText_ForPetesSake(enum BattlerId battler)
         }
         break;
     }
+    */
 }
 
 void PrintOakText_InflictingDamageIsKey(enum BattlerId battler)
@@ -702,6 +709,7 @@ static void OakOldManHandlePrintString(enum BattlerId battler)
             BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MSG);
         if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
         {
+            /*
             switch (*stringId)
             {
             case STRINGID_DEFENDERSSTATFELL:
@@ -722,6 +730,7 @@ static void OakOldManHandlePrintString(enum BattlerId battler)
                 gBattlerControllerFuncs[battler] = PrintOakText_OakNoRunningFromATrainer;
                 return;
             }
+            */
         }
         gBattlerControllerFuncs[battler] = CompleteOnInactiveTextPrinter;
     }
