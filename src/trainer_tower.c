@@ -1,22 +1,24 @@
 #include "global.h"
-#include "gflib.h"
-#include "util.h"
-#include "event_data.h"
-#include "cereader_tool.h"
-#include "easy_chat.h"
+#include "battle_main.h"
 #include "battle_setup.h"
 #include "battle_transition.h"
 #include "battle.h"
-#include "battle_main.h"
-#include "overworld.h"
+#include "cereader_tool.h"
+#include "easy_chat.h"
+#include "event_data.h"
 #include "item.h"
+#include "malloc.h"
 #include "menu.h"
-#include "constants/items.h"
-#include "constants/songs.h"
-#include "constants/layouts.h"
-#include "constants/trainers.h"
+#include "overworld.h"
+#include "sound.h"
+#include "string_util.h"
+#include "util.h"
 #include "constants/event_objects.h"
+#include "constants/items.h"
+#include "constants/layouts.h"
+#include "constants/songs.h"
 #include "constants/trainer_tower.h"
+#include "constants/trainers.h"
 
 #define CURR_FLOOR sTrainerTowerState->data.floors[sTrainerTowerState->floorIdx]
 #define TRAINER_TOWER gSaveBlock1Ptr->trainerTower[gSaveBlock1Ptr->towerChallengeId]
@@ -573,13 +575,13 @@ static void SetTrainerTowerNPCGraphics(void)
     {
     case CHALLENGE_TYPE_SINGLE:
         facilityClass = CURR_FLOOR.trainers[0].facilityClass;
-        for (i = 0; i < NELEMS(sSingleBattleTrainerInfo); i++)
+        for (i = 0; i < ARRAY_COUNT(sSingleBattleTrainerInfo); i++)
         {
             if (sSingleBattleTrainerInfo[i].facilityClass == facilityClass)
                 break;
         }
 
-        if (i != NELEMS(sSingleBattleTrainerInfo))
+        if (i != ARRAY_COUNT(sSingleBattleTrainerInfo))
             trainerGfx1 = sSingleBattleTrainerInfo[i].objGfx;
         else
             trainerGfx1 = OBJ_EVENT_GFX_YOUNGSTER;
@@ -588,12 +590,12 @@ static void SetTrainerTowerNPCGraphics(void)
         break;
     case CHALLENGE_TYPE_DOUBLE:
         facilityClass = CURR_FLOOR.trainers[0].facilityClass;
-        for (i = 0; i < NELEMS(sDoubleBattleTrainerInfo); i++)
+        for (i = 0; i < ARRAY_COUNT(sDoubleBattleTrainerInfo); i++)
         {
             if (sDoubleBattleTrainerInfo[i].facilityClass == facilityClass)
                 break;
         }
-        if (i != NELEMS(sDoubleBattleTrainerInfo))
+        if (i != ARRAY_COUNT(sDoubleBattleTrainerInfo))
         {
             trainerGfx1  = sDoubleBattleTrainerInfo[i].objGfx1;
             trainerGfx2 = sDoubleBattleTrainerInfo[i].objGfx2;
@@ -610,13 +612,13 @@ static void SetTrainerTowerNPCGraphics(void)
         for (j = 0; j < MAX_TRAINERS_PER_FLOOR; j++)
         {
             facilityClass = CURR_FLOOR.trainers[j].facilityClass;
-            for (i = 0; i < NELEMS(sSingleBattleTrainerInfo); i++)
+            for (i = 0; i < ARRAY_COUNT(sSingleBattleTrainerInfo); i++)
             {
                 if (sSingleBattleTrainerInfo[i].facilityClass == facilityClass)
                     break;
             }
 
-            if (i != NELEMS(sSingleBattleTrainerInfo))
+            if (i != ARRAY_COUNT(sSingleBattleTrainerInfo))
                 trainerGfx1 = sSingleBattleTrainerInfo[i].objGfx;
             else
                 trainerGfx1 = OBJ_EVENT_GFX_YOUNGSTER;
@@ -696,21 +698,21 @@ static void TrainerTowerGetOpponentTextColor(u8 challengeType, u8 facilityClass)
     {
     case CHALLENGE_TYPE_SINGLE:
     case CHALLENGE_TYPE_KNOCKOUT:
-        for (i = 0; i < NELEMS(sSingleBattleTrainerInfo); i++)
+        for (i = 0; i < ARRAY_COUNT(sSingleBattleTrainerInfo); i++)
         {
             if (sSingleBattleTrainerInfo[i].facilityClass == facilityClass)
                 break;
         }
-        if (i != NELEMS(sSingleBattleTrainerInfo))
+        if (i != ARRAY_COUNT(sSingleBattleTrainerInfo))
             gender = sSingleBattleTrainerInfo[i].gender;
         break;
     case CHALLENGE_TYPE_DOUBLE:
-        for (i = 0; i < NELEMS(sDoubleBattleTrainerInfo); i++)
+        for (i = 0; i < ARRAY_COUNT(sDoubleBattleTrainerInfo); i++)
         {
             if (sDoubleBattleTrainerInfo[i].facilityClass == facilityClass)
                 break;
         }
-        if (i != NELEMS(sDoubleBattleTrainerInfo))
+        if (i != ARRAY_COUNT(sDoubleBattleTrainerInfo))
         {
             if (VarGet(VAR_TEMP_3))
                 gender = sDoubleBattleTrainerInfo[i].gender2;
@@ -1010,13 +1012,13 @@ static void PlayTrainerTowerEncounterMusic(void)
     u16 idx = VarGet(VAR_TEMP_1);
     u8 facilityClass = CURR_FLOOR.trainers[idx].facilityClass;
 
-    for (i = 0; i < NELEMS(sTrainerEncounterMusicLUT); i++)
+    for (i = 0; i < ARRAY_COUNT(sTrainerEncounterMusicLUT); i++)
     {
         if (sTrainerEncounterMusicLUT[i].facilityClass == gFacilityClassToTrainerClass[facilityClass])
             break;
     }
 
-    if (i != NELEMS(sTrainerEncounterMusicLUT))
+    if (i != ARRAY_COUNT(sTrainerEncounterMusicLUT))
     {
         idx = sTrainerEncounterMusicLUT[i].musicId;
     }

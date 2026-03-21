@@ -1,18 +1,22 @@
 #include "global.h"
 #include "decompress.h"
-#include "gflib.h"
+#include "dma3.h"
 #include "event_data.h"
 #include "field_specials.h"
 #include "field_weather.h"
 #include "graphics.h"
 #include "help_message.h"
-#include "menu.h"
+#include "malloc.h"
 #include "menu_helpers.h"
+#include "menu.h"
+#include "palette.h"
 #include "pokedex.h"
 #include "pokemon_icon.h"
 #include "quest_log.h"
 #include "region_map.h"
 #include "script.h"
+#include "sound.h"
+#include "string_util.h"
 #include "strings.h"
 #include "text_window.h"
 #include "constants/songs.h"
@@ -1124,7 +1128,7 @@ void ResetTempTileDataBuffers(void)
 {
     int i;
 
-    for (i = 0; i < (s32)NELEMS(sTempTileDataBuffers); i++)
+    for (i = 0; i < (s32)ARRAY_COUNT(sTempTileDataBuffers); i++)
     {
         sTempTileDataBuffers[i] = NULL;
     }
@@ -1157,7 +1161,7 @@ void *DecompressAndCopyTileDataToVram(u8 bgId, const void *src, u32 size, u16 of
 {
     u32 sizeOut;
 
-    if (sTempTileDataBufferCursor < NELEMS(sTempTileDataBuffers))
+    if (sTempTileDataBufferCursor < ARRAY_COUNT(sTempTileDataBuffers))
     {
         void *ptr = malloc_and_decompress(src, &sizeOut);
         if (!size)
@@ -1422,7 +1426,7 @@ static u8 MultichoiceGrid_MoveCursorIfValid(s8 deltaX, s8 deltaY)
     }
 }
 
-s8 Menu_ProcessInputGridLayout(void)
+s8 Menu_ProcessGridInput(void)
 {
     u8 oldPos = sMenu.cursorPos;
 

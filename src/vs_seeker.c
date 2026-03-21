@@ -1,30 +1,31 @@
 #include "global.h"
-#include "gflib.h"
-#include "constants/songs.h"
-#include "task.h"
-#include "event_object_movement.h"
-#include "menu.h"
-#include "item_use.h"
-#include "event_scripts.h"
-#include "event_data.h"
-#include "script.h"
-#include "event_object_lock.h"
-#include "field_specials.h"
-#include "item.h"
-#include "item_menu.h"
-#include "field_effect.h"
-#include "script_movement.h"
-#include "battle.h"
 #include "battle_setup.h"
-#include "random.h"
+#include "battle.h"
+#include "event_data.h"
+#include "event_object_lock.h"
+#include "event_object_movement.h"
+#include "event_scripts.h"
+#include "field_effect.h"
 #include "field_player_avatar.h"
+#include "field_specials.h"
+#include "item_menu.h"
+#include "item_use.h"
+#include "item.h"
+#include "malloc.h"
+#include "menu.h"
+#include "random.h"
+#include "script_movement.h"
+#include "script.h"
+#include "sound.h"
+#include "task.h"
 #include "vs_seeker.h"
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
-#include "constants/maps.h"
 #include "constants/items.h"
+#include "constants/maps.h"
 #include "constants/quest_log.h"
 #include "constants/script_commands.h"
+#include "constants/songs.h"
 #include "constants/trainer_types.h"
 #include "constants/vs_seeker.h"
 
@@ -1920,7 +1921,7 @@ static bool8 ShouldTryRematchBattleInternal(const struct RematchData *vsSeekerDa
 
     if (rematchIdx == -1)
         return FALSE;
-    if (rematchIdx >= 0 && rematchIdx < NELEMS(sRematches))
+    if (rematchIdx >= 0 && rematchIdx < ARRAY_COUNT(sRematches))
     {
         if (IsThisTrainerRematchable(gSpecialVar_LastTalked))
             return TRUE;
@@ -1951,7 +1952,7 @@ static int LookupVsSeekerOpponentInArray(const struct RematchData * array, u16 t
 {
     int i, j;
 
-    for (i = 0; i < NELEMS(sRematches); i++)
+    for (i = 0; i < ARRAY_COUNT(sRematches); i++)
     {
         for (j = 0; j < MAX_REMATCH_PARTIES; j++)
         {
@@ -1993,7 +1994,7 @@ static bool8 IsTrainerReadyForRematchInternal(const struct RematchData * array, 
 
     if (rematchTrainerIdx == -1)
         return FALSE;
-    if (rematchTrainerIdx >= NELEMS(sRematches))
+    if (rematchTrainerIdx >= ARRAY_COUNT(sRematches))
         return FALSE;
     if (!IsThisTrainerRematchable(gSpecialVar_LastTalked))
         return FALSE;
@@ -2111,7 +2112,7 @@ static int GetRematchIdx(const struct RematchData * vsSeekerData, u16 trainerFla
 {
     int i;
 
-    for (i = 0; i < NELEMS(sRematches); i++)
+    for (i = 0; i < ARRAY_COUNT(sRematches); i++)
     {
         if (vsSeekerData[i].trainerIDs[0] == trainerFlagIdx)
             return i;
@@ -2134,7 +2135,7 @@ static void ClearAllTrainerRematchStates(void)
 #if FREE_MATCH_CALL == FALSE
    u8 i;
 
-   for (i = 0; i < NELEMS(gSaveBlock1Ptr->trainerRematches); i++)
+   for (i = 0; i < ARRAY_COUNT(gSaveBlock1Ptr->trainerRematches); i++)
       gSaveBlock1Ptr->trainerRematches[i] = 0;
 #endif //FREE_MATCH_CALL
 }
@@ -2162,7 +2163,7 @@ static u8 GetNextAvailableRematchTrainer(const struct RematchData * vsSeekerData
 {
     int i, j;
 
-    for (i = 0; i < NELEMS(sRematches); i++)
+    for (i = 0; i < ARRAY_COUNT(sRematches); i++)
     {
         if (vsSeekerData[i].trainerIDs[0] == trainerFlagNo)
         {

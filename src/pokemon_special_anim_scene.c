@@ -1,13 +1,19 @@
 #include "global.h"
-#include "gflib.h"
+#include "bg.h"
 #include "data.h"
 #include "decompress.h"
+#include "dma3.h"
 #include "dynamic_placeholder_text_util.h"
-#include "item.h"
+#include "gpu_regs.h"
 #include "item_icon.h"
+#include "item.h"
+#include "malloc.h"
 #include "menu.h"
+#include "palette.h"
 #include "pokemon_special_anim_internal.h"
 #include "random.h"
+#include "sound.h"
+#include "string_util.h"
 #include "strings.h"
 #include "text_window.h"
 #include "trig.h"
@@ -328,7 +334,7 @@ void InitPokemonSpecialAnimScene(struct PokemonSpecialAnimScene * buffer, u16 an
     ResetTempTileDataBuffers();
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     ResetBgsAndClearDma3BusyFlags(FALSE);
-    InitBgsFromTemplates(0, sBgTemplates, NELEMS(sBgTemplates));
+    InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
     InitWindows(sWindowTemplates);
     ChangeBgX(0, 0, 0);
     ChangeBgY(0, 0, 0);
