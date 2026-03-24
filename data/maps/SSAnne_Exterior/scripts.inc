@@ -5,7 +5,6 @@ SSAnne_Exterior_MapScripts::
 
 SSAnne_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_SSANNE_EXTERIOR
-	call_if_set FLAG_SYS_GAUNTLET, SSAnne_Exterior_EventScript_NotGuantlet
 	call_if_set FLAG_GOT_HM01, SSAnne_Exterior_EventScript_RemoveSlowpoke
 	call_if_set FLAG_BADGE08_GET, SSAnne_Exterior_EventScript_MewFightCheck
 	end
@@ -117,10 +116,6 @@ SSAnne_Exterior_EventScript_RanFromMew::
 	setvar VAR_0x8004, SPECIES_MEW
 	goto EventScript_MonFlewAway
 	end
-
-SSAnne_Exterior_EventScript_NotGuantlet::
-	clearflag FLAG_SYS_GAUNTLET
-	return
 
 SSAnne_Exterior_EventScript_RemoveSlowpoke::
 	setflag FLAG_HIDE_SSANNEEXT_SLOWPOKE

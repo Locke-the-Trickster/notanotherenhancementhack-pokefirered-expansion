@@ -538,7 +538,7 @@
 #define FLAG_HIDE_SSANNE_B1F_ROOM4_MYSTIC_WATER                 0x204
 #define FLAG_HIDE_SSANNE_B1F_ROOM1_ADAMANT_MINT                 0x205
 #define FLAG_HIDE_SSANNE_DECK_MODEST_MINT                       0x206
-#define FLAG_0x207               0x207
+#define FLAG_HIDE_HIDDEN_MEADOW_BIG_ROOT                        0x207
 #define FLAG_0x208               0x208
 #define FLAG_0x209               0x209
 #define FLAG_0x20A               0x20A
@@ -1042,7 +1042,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE25_CUSTAP_BERRY                              (FLAG_HIDDEN_ITEMS_START +   4)
 #define FLAG_HIDDEN_ITEM_ROUTE25_MARANGA_BERRY                             (FLAG_HIDDEN_ITEMS_START +   5)
 #define FLAG_HIDDEN_ITEM_ROUTE9_ETHER                                      (FLAG_HIDDEN_ITEMS_START +   6)
-#define FLAG_HIDDEN_ITEM_UNUSED_0x07                                       (FLAG_HIDDEN_ITEMS_START +   7)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ABILITY_CAPSULE                       (FLAG_HIDDEN_ITEMS_START +   7)
 #define FLAG_HIDDEN_ITEM_SSANNE_B1F_CORRIDOR_SHARP_BEAK                    (FLAG_HIDDEN_ITEMS_START +   8)
 #define FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION                              (FLAG_HIDDEN_ITEMS_START +   9)
 #define FLAG_HIDDEN_ITEM_ROUTE10_MAX_ETHER                                 (FLAG_HIDDEN_ITEMS_START +  10)
@@ -1075,7 +1075,7 @@
 #define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL                        (FLAG_HIDDEN_ITEMS_START +  37)
 #define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_FULL_RESTORE                      (FLAG_HIDDEN_ITEMS_START +  38)
 #define FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_ULTRA_BALL                       (FLAG_HIDDEN_ITEMS_START +  39)
-#define FLAG_HIDDEN_ITEM_UNUSED_0x28                                       (FLAG_HIDDEN_ITEMS_START +  40)
+#define FLAG_HIDDEN_ITEM_ROUTE4_GRIP_CLAW                                  (FLAG_HIDDEN_ITEMS_START +  40)
 #define FLAG_HIDDEN_ITEM_ROUTE11_ESCAPE_ROPE                               (FLAG_HIDDEN_ITEMS_START +  41)
 #define FLAG_HIDDEN_ITEM_ROUTE12_HYPER_POTION                              (FLAG_HIDDEN_ITEMS_START +  42)
 #define FLAG_HIDDEN_ITEM_UNUSED_0x2B                                       (FLAG_HIDDEN_ITEMS_START +  43)

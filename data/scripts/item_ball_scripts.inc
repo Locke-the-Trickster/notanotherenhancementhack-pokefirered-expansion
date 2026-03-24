@@ -23,6 +23,10 @@ ViridianForest_EventScript_ItemSilverPowder::
 	finditem ITEM_SILVER_POWDER
 	end
 
+HiddenMeadow_EventScript_ItemBigRoot::
+	finditem ITEM_BIG_ROOT
+	end
+
 Route4_EventScript_ItemTM52::
 	finditem ITEM_TM52
 	end

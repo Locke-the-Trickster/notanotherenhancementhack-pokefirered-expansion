@@ -4,7 +4,7 @@ SSAnne_1F_Corridor_MapScripts::
 
 SSAnne_1F_Corridor_OnTransition::
 	call_if_unset FLAG_GOT_HM01, SSAnne_1F_Corridor_EventScript_SlowpokeTriggerSetup
-	call_if_unset FLAG_SYS_GAUNTLET, SSAnne_1F_Corridor_EventScript_Guantlet
+	call_if_unset FLAG_SYS_GAUNTLET, SSAnne_1F_Corridor_EventScript_Gauntlet
 	call_if_set FLAG_GOT_HM01, SSAnne_1F_Corridor_EventScript_SlowpokeHide
 	end
 
@@ -16,7 +16,7 @@ SSAnne_1F_Corridor_EventScript_Sailor::
 	msgbox SSAnne_1F_Corridor_Text_PassengersAreRestless, MSGBOX_NPC
 	end
 
-SSAnne_1F_Corridor_EventScript_Guantlet::
+SSAnne_1F_Corridor_EventScript_Gauntlet::
 	setflag FLAG_SYS_GAUNTLET
 	return
 

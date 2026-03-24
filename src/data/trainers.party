@@ -1298,16 +1298,54 @@ Double Battle: No
 AI: Smart Trainer
 
 Rattata
-Level: 10
+Ability: Adaptability
+Level: 17
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Hyper Fang
+- Assurance
+- Laser Focus
+- Quick Attack
 
-Rattata
-Level: 10
+Natu
+Ability: Magic Bounce
+Level: 17
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Confusion
+- Gust
+- Forest's Curse
+- Magic Room
 
-Zubat
-Level: 10
+Dunsparce @ Salac Berry
+Ability: Rattled
+Level: 16
+Naughty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Yawn
+- Defense Curl
+- Rollout
+- Flail
+
+Tyrogue
+Ability: Guts
+Level: 16
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mach Punch
+- Dizzy Punch
+- Rock Smash
+- Fake Out
+
+Sandshrew @ Oran Berry
+Ability: Battle Armor
+Level: 17
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rollout
+- Sand Tomb
+- Fury Cutter
+- Defense Curl
 
 === TRAINER_YOUNGSTER_TIMMY ===
 Name: TIMMY
@@ -1318,13 +1356,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Sandshrew
-Level: 14
+Aipom @ Oran Berry
+Ability: Skill Link
+Level: 19
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Tail Slap
+- Astonish
+- Tickle
+- Sand Attack
 
-Ekans
-Level: 14
+Sandshrew @ Sitrus Berry
+Ability: Battle Armor
+Level: 21
+Impish Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Dig
+- Fury Cutter
+- Rollout
+- Defense Curl
+
+Kirlia @ Oran Berry
+Ability: Trace
+Level: 21
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Psybeam
+- Rolling Kick
+- Draining Kiss
+- Charm
+
+Slugma @ Starf Berry
+Ability: Weak Armor
+Level: 19
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rock Tomb
+- Fire Spin
+- Yawn
+- Smog
+
+Skiploom @ Oran Berry
+Ability: Chlorophyll
+Level: 19
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aerial Ace
+- Leech Seed
+- Sleep Powder
+- Bullet Seed
+
+Spheal @ Chesto Berry
+Ability: Thick Fat
+Level: 19
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Chilling Water
+- Rest
+- Sleep Talk
+- Powder Snow
 
 === TRAINER_YOUNGSTER_JOEY ===
 Name: JOEY
@@ -1335,13 +1425,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Rattata
-Level: 15
+Numel @ Oran Berry
+Ability: Simple
+Level: 22
+Quiet Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Amnesia
+- Shelter
+- Incinerate
+- Bulldoze
 
-Spearow
-Level: 15
+Croconaw @ Starf Berry
+Ability: Strong Jaw
+Level: 22
+Lonely Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ice Fang
+- Triple Dive
+- Flail
+- Bite
+
+Breloom @ Oran Berry
+Ability: Poison Heal
+Level: 23
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Poison Fang
+- Headbutt
+- Bullet Seed
+- Leech Seed
+
+Makuhita @ Black Belt
+Ability: Analytic
+Level: 22
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Force Palm
+- Fake Out
+- Whirlwind
+- Brine
+
+Raticate @ Micle Berry
+Ability: Hustle
+Level: 23
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Hyper Fang
+- Assurance
+- Quick Attack
+- Fake Out
+
+Noctowl @ Sitrus Berry
+Ability: Tinted Lens
+Level: 24
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Hex
+- Gust
+- Sing
+- Reflect
 
 === TRAINER_YOUNGSTER_DAN ===
 Name: DAN
@@ -1352,9 +1494,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Slowpoke
-Level: 17
+Ponyta @ Oran Berry
+Ability: Flash Fire
+Level: 22
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Stomp
+- Flame Charge
+- Double Kick
+- Quick Attack
+
+Roselia @ Starf Berry
+Ability: Natural Cure
+Level: 22
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mega Drain
+- Acid Spray
+- Venom Drench
+- Leech Seed
+
+Fearow @ Sitrus Berry
+Ability: Gale Wings
+Level: 23
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aerial Ace
+- Mirror Move
+- Assurance
+- Glare
+
+Spinda @ Oran Berry
+Ability: Pure Power
+Level: 23
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Double Team
+- Tickle
+- Dizzy Punch
+- Rolling Kick
+
+Venonat @ Grip Claw
+Ability: Shield Dust
+Level: 22
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Psybeam
+- Infestation
+- Poison Powder
+- Magic Powder
+
+Slowpoke @ Lum Berry
+Ability: Regenerator
+Level: 24
+Quiet Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Zen Headbutt
+- Water Pulse
+- Yawn
+- Mist
 
 === TRAINER_YOUNGSTER_CHAD ===
 Name: CHAD
@@ -1365,13 +1563,62 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Ekans
-Level: 14
+Mantyke @ Mystic Water
+Ability: Water Absorb
+Level: 22
+Modest Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Whirlpool
+- Gust
+- Aqua Ring
+- Supersonic
 
-Sandshrew
-Level: 14
+Meditite @ Rawst Berry
+Ability: Pure Power
+Level: 24
+Lonely Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Force Palm
+- Psybeam
+- Ice Punch
+- Vacuum Wave
+
+Diglett @ Focus Band
+Ability: Arena Trap
+Level: 23
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sucker Punch
+- Dig
+- Bulldoze
+- Astonish
+
+Ditto @ Quick Powder
+Ability: Imposter
+Level: 23
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Transform
+
+Houndour @ Oran Berry
+Ability: Unnerve
+Level: 22
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Wheel
+- Thunder Fang
+- Howl
+- Bite
+
+Bayleef @ Sitrus Berry
+Ability: Effect Spore
+Level: 22
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Magical Leaf
+- Poison Powder
+- Synthesis
+- Safeguard
 
 === TRAINER_YOUNGSTER_TYLER ===
 Name: TYLER
@@ -1656,7 +1903,7 @@ Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
 Music: Male
-Double Battle: Yes
+Double Battle: No
 AI: Smart Trainer
 
 Caterpie
@@ -1766,21 +2013,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Caterpie
-Level: 10
+Butterfree @ Oran Berry
+Ability: Compound Eyes
+Level: 19
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sleep Powder
+- Confusion
+- Struggle Bug
+- Tearful Look
 
-Weedle
-Level: 10
+Heracross @ Cheri Berry
+Ability: Moxie
+Level: 19
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Karate Chop
+- Bug Bite
+- Aerial Ace
+- Endure
 
-Metapod
-Level: 10
+Shedinja @ Silver Powder
+Ability: Wonder Guard
+Level: 20
+Lonely Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Fury Cutter
+- Dig
+- Screech
+- Sand Attack
 
-Kakuna
-Level: 10
+Beautifly @ Sitrus Berry
+Ability: Supersweet Syrup
+Level: 21
+Naive Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Stun Spore
+- Morning Sun
+- Absorb
+- Struggle Bug
+
+Pinsir @ Oran Berry
+Ability: Mold Breaker
+Level: 19
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Pluck
+- Bug Bite
+- Vital Throw
+- Seismic Toss
+
+Ninjask @ Starf Berry
+Ability: Speed Boost
+Level: 20
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Dig
+- Fury Cutter
+- Sand Attack
+- Screech
 
 === TRAINER_BUG_CATCHER_KEIGO ===
 Name: KEIGO
@@ -1788,20 +2079,68 @@ Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
 Music: Male
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Weedle
-Level: 16
+Butterfree @ Oran Berry
+Ability: Tinted Lens
+Level: 24
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Air Cutter
+- Sleep Powder
+- Struggle Bug
+- Whirlwind
 
-Caterpie
-Level: 16
+Masquerain @ Sitrus Berry
+Ability: Intimidate
+Level: 25
+Bold Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Soak
+- Stun Spore
+- Bubble Beam
+- Struggle Bug
 
-Weedle
-Level: 16
+Dustox @ Oran Berry
+Ability: Shield Dust
+Level: 23
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Confusion
+- Reflect
+- Light Screen
+- Poison Powder
+
+Scyther @ Starf Berry
+Ability: Technician
+Level: 23
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Pounce
+- Steel Wing
+- Quick Attack
+- Wing Attack
+
+Parasect @ Oran Berry
+Ability: Dry Skin
+Level: 24
+Careful Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Cut
+- Pounce
+- Sleep Powder
+- Rage Powder
+
+Trapinch @ Soft Sand
+Ability: Arena Trap
+Level: 23
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Bug Bite
+- Sand Attack
+- Supersonic
 
 === TRAINER_BUG_CATCHER_ELIJAH ===
 Name: ELIJAH
@@ -2082,13 +2421,55 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Oddish
-Level: 11
+Houndour
+Ability: Unnerve
+Level: 16
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Wheel
+- Thunder Fang
+- Bite
+- Howl
 
 Bellsprout
-Level: 11
+Ability: Chlorophyll
+Level: 17
+Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Acid Spray
+- Vine Whip
+- Gastro Acid
+- Absorb
+
+Staryu
+Ability: Analytic
+Level: 16
+Quiet Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Gun
+- Swift
+- Confusion
+- Rapid Spin
+
+Whismur
+Ability: Soundproof
+Level: 17
+Naughty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Stomp
+- Howl
+- Supersonic
+- Bite
+
+Hoothoot @ Oran Berry
+Ability: Tinted Lens
+Level: 17
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ominous Wind
+- Sing
+- Gust
+- Echoed Voice
 
 === TRAINER_LASS_IRIS ===
 Name: IRIS
@@ -2100,8 +2481,54 @@ Double Battle: No
 AI: Smart Trainer
 
 Clefairy
-Level: 14
+Ability: Magic Guard
+Level: 17
+Bold Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Echoed Voice
+- Metronome
+- Disarming Voice
+- Sweet Kiss
+
+Zigzagoon
+Ability: Pickpocket
+Level: 16
+Careful Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Covet
+- Quick Attack
+- Baby Doll Eyes
+- Sand Attack
+
+Poochyena
+Ability: Quick Feet
+Level: 16
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bite
+- Power Trip
+- Howl
+- Yawn
+
+Mawile
+Ability: Intimidate
+Level: 17
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Draining Kiss
+- Metal Claw
+- Fake Tears
+- Bite
+
+Doduo
+Ability: Limber
+Level: 17
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Horn Attack
+- Pluck
+- Quick Attack
+- Agility
 
 === TRAINER_LASS_RELI ===
 Name: RELI
@@ -2109,16 +2536,68 @@ Class: Lass
 Pic: Lass
 Gender: Male
 Music: Female
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Nidoran M
-Level: 16
+Nidorina @ Sitrus Berry
+Ability: Poison Point
+Level: 20
+Impish Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Helping Hand
+- Mud Shot
+- Growl
+- Poison Sting
 
-Nidoran F
-Level: 16
+Nidorino @ Oran Berry
+Ability: Sheer Force
+Level: 20
+Naughty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Horn Attack
+- Bite
+- Double Kick
+- Helping Hand
+
+Seel @ Oran Berry
+Ability: Thick Fat
+Level: 19
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aqua Ring
+- Ice Shard
+- Chilling Water
+- Encore
+
+Sunflora @ Heat Rock
+Ability: Flower Gift
+Level: 21
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sunny Day
+- Synthesis
+- Growth
+- Mega Drain
+
+Teddiursa @ Starf Berry
+Ability: Gluttony
+Level: 19
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mega Punch
+- Charm
+- Fake Tears
+- Lick
+
+Mightyena @ Oran Berry
+Ability: Intimidate
+Level: 19
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Swagger
+- Yawn
+- Bite
+- Roar
 
 === TRAINER_LASS_ALI ===
 Name: ALI
@@ -2129,17 +2608,65 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Pidgey
-Level: 12
+Smoochum @ Starf Berry
+Ability: Dry Skin
+Level: 19
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sing
+- Confusion
+- Powder Snow
+- Sweet Kiss
 
-Oddish
-Level: 12
+Relicanth @ Chesto Berry
+Ability: Rock Head
+Level: 20
+Naughty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Take Down
+- Dive
+- Ancient Power
+- Rest
 
-Bellsprout
-Level: 12
+Torkoal @ Oran Berry
+Ability: White Smoke
+Level: 19
+Impish Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Protect
+- Flame Wheel
+- Corrosive Gas
+- Clear Smog
+
+Oddish @ Big Root
+Ability: Stench
+Level: 19
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sludge
+- Poison Powder
+- Mega Drain
+- Powder
+
+Vigoroth @ Oran Berry
+Ability: Vital Spirit
+Level: 20
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Covet
+- Slack Off
+- Yawn
+- Focus Energy
+
+Fearow @ Sitrus Berry
+Ability: Gale Wings
+Level: 21
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Assurance
+- Aerial Ace
+- Mirror Move
+- Glare
 
 === TRAINER_LASS_2 ===
 Name: PH
@@ -2164,20 +2691,68 @@ Class: Lass
 Pic: Lass
 Gender: Male
 Music: Female
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Oddish
-Level: 13
+Happiny @ Sitrus Berry
+Ability: Natural Cure
+Level: 23
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Heal Pulse
+- Tearful Look
+- Sweet Kiss
+- Echoed Voice
 
-Pidgey
-Level: 13
+Yanma @ Oran Berry
+Ability: Speed Boost
+Level: 22
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bug Bite
+- Gust
+- Sonic Boom
+- Hypnosis
 
-Oddish
-Level: 13
+Psyduck @ Oran Berry
+Ability: Damp
+Level: 23
+Modest Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Kinesis
+- Disable
+- Confusion
+
+Elekid @ Magnet
+Ability: Vital Spirit
+Level: 22
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thunder Wave
+- Shock Wave
+- Swift
+- Charge
+
+Mime Jr. @ Starf Berry
+Ability: Soundproof
+Level: 22
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Baton Pass
+- Guard Swap
+- Power Swap
+- Fairy Wind
+
+Gloom @ Custap Berry
+Ability: Stench
+Level: 24
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Giga Drain
+- Purify
+- Sludge
+- Corrosive Gas
 
 === TRAINER_LASS_ANN ===
 Name: ANN
@@ -2188,13 +2763,65 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Pidgey
-Level: 18
+Pidgeotto @ Sharp Beak
+Ability: Keen Eye
+Level: 24
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Air Cutter
+- Thundershock
+- Feather Dance
+- Twister
 
-Nidoran F
-Level: 18
+Skarmory @ Wacan Berry
+Ability: Full Metal Body
+Level: 25
+Impish Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Spikes
+- Autotomize
+- Metal Claw
+- Aerial Ace
+
+Gligar @ Soft Sand
+Ability: Immunity
+Level: 25
+Naughty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Stealth Rock
+- Sand Tomb
+- Aerial Ace
+- Knock Off
+
+Mantine @ Sitrus Berry
+Ability: Water Absorb
+Level: 24
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Air Cutter
+- Aqua Ring
+- Safeguard
+
+Skiploom @ Big Root
+Ability: Chlorophyll
+Level: 24
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mega Drain
+- Leech Seed
+- Aerial Ace
+- Sleep Powder
+
+Noctowl @ Spell Tag
+Ability: Tinted Lens
+Level: 26
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Hex
+- Sing
+- Reflect
+- Swift
 
 === TRAINER_LASS_DAWN ===
 Name: DAWN
@@ -2545,13 +3172,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Rattata
-Level: 14
+Linoone @ Starf Berry
+Ability: Gluttony
+Level: 20
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Quick Attack
+- Covet
+- Flail
+- Baby Doll Eyes
 
-Ekans
-Level: 14
+Ekans @ Oran Berry
+Ability: Shed Skin
+Level: 19
+Rash Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sludge
+- Bite
+- Glare
+- Acid
+
+Cubone @ Thick Club
+Ability: Lightning Rod
+Level: 19
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Headbutt
+- Mud Shot
+- Retaliate
+- Fling
+
+Sudowoodo @ Oran Berry
+Ability: Sturdy
+Level: 19
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rock Throw
+- Low Kick
+- Block
+- Mimic
+
+Lombre @ Miracle Seed
+Ability: Rain Dish
+Level: 21
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bubble Beam
+- Mega Drain
+- Teeter Dance
+- Mist
+
+Unown @ Sitrus Berry
+Ability: Levitate
+Level: 20
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Hidden Power
+- Ancient Power
+- Superpower
+- Nature Power
 
 === TRAINER_CAMPER_ETHAN ===
 Name: ETHAN
@@ -2562,9 +3241,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Mankey
-Level: 18
+Phanpy @ Custap Berry
+Ability: Battle Armor
+Level: 19
+Careful Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Horn Attack
+- Charm
+- Flail
+
+Krabby @ Binding Band
+Ability: Hyper Cutter
+Level: 20
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Clamp
+- Vise Grip
+- Metal Claw
+- Leer
+
+Swablu @ Oran Berry
+Ability: Natural Cure
+Level: 19
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Pluck
+- Round
+- Dragon Breath
+- Sing
+
+Lunatone @ Oran Berry
+Ability: Levitate
+Level: 20
+Mild Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ancient Power
+- Confusion
+- Hypnosis
+- Rock Polish
+
+Grovyle @ Oran Berry
+Ability: Unburden
+Level: 19
+Naughty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bullet Seed
+- Quick Attack
+- Fury Cutter
+- Screech
+
+Mankey @ Sitrus Berry
+Ability: Defiant
+Level: 21
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Karate Chop
+- Rage Fist
+- Rage
+- Low Kick
 
 === TRAINER_CAMPER_RICKY ===
 Name: RICKY
@@ -2575,9 +3310,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Squirtle
-Level: 20
+Slugma @ Oran Berry
+Ability: Flame Body
+Level: 24
+Relaxed Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ancient Power
+- Flame Wheel
+- Clear Smog
+- Yawn
+
+Wartortle @ Sitrus Berry
+Ability: Torrent
+Level: 25
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Protect
+- Water Pulse
+- Bite
+- Aqua Ring
+
+Weepinbell @ Starf Berry
+Ability: Gluttony
+Level: 24
+Careful Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Knock Off
+- Razor Leaf
+- Gastro Acid
+- Ingrain
+
+Clefairy @ Oran Berry
+Ability: Magic Guard
+Level: 23
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Copycat
+- Disarming Voice
+- Metronome
+- Charm
+
+Swablu @ Metronome
+Ability: Natural Cure
+Level: 23
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Echoed Voice
+- Dragon Breath
+- Pluck
+- Sing
+
+Cubone @ Thick Club
+Ability: Rock Head
+Level: 23
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Retaliate
+- Headbutt
+- Fling
 
 === TRAINER_CAMPER_JEFF ===
 Name: JEFF
@@ -2588,13 +3379,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Spearow
-Level: 16
+Dratini @ Oran Berry
+Ability: Shed Skin
+Level: 23
+Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Triple Dive
+- Dragon Tail
+- Slam
+- Thunder Wave
 
-Raticate
-Level: 16
+Munchlax @ Berry Juice
+Ability: Thick Fat
+Level: 24
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Magnitude
+- Stockpile
+- Swallow
+- Spit Up
+
+Torkoal @ Oran Berry
+Ability: White Smoke
+Level: 23
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Magnitude
+- Protect
+- Fire Spin
+- Corrosive Gas
+
+Spoink @ Oran Berry
+Ability: Thick Fat
+Level: 24
+Naughty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Zen Headbutt
+- Poison Gas
+- Venoshock
+- Psych Up
+
+Cacnea @ Starf Berry
+Ability: Water Absorb
+Level: 23
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Growth
+- Power Trip
+- Leech Seed
+- Ingrain
+
+Marshtomp @ Sitrus Berry
+Ability: Mold Breaker
+Level: 25
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Protect
+- Water Pulse
+- Yawn
+- Mud Shot
 
 === TRAINER_CAMPER_2 ===
 Name: PH
@@ -2660,9 +3503,65 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Goldeen
-Level: 19
+Tentacool @ Oran Berry
+Ability: Clear Body
+Level: 18
+Bold Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Poison Gas
+- Acid
+- Supersonic
+
+Psyduck @ Twisted Spoon
+Ability: Damp
+Level: 18
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Confusion
+- Kinesis
+- Disable
+
+Goldeen @ Muscle Band
+Ability: Water Veil
+Level: 19
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Horn Attack
+- Fury Cutter
+- Supersonic
+
+Barboach @ Soft Sand
+Ability: Anticipation
+Level: 19
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Bulldoze
+- Rock Throw
+- Tickle
+
+Clamperl @ Deep Sea Tooth
+Ability: Weak Armor
+Level: 18
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Chilling Water
+- Draining Kiss
+- Iron Defense
+- Scary Face
+
+Milotic @ Sitrus Berry
+Ability: Multiscale
+Level: 20
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Flip Turn
+- Attract
+- Flail
 
 === TRAINER_PICNICKER_NANCY ===
 Name: NANCY
@@ -2673,13 +3572,65 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Rattata
-Level: 16
+Granbull @ Oran Berry
+Ability: Intimidate
+Level: 24
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ice Fang
+- Facade
+- Roar
+- Charm
 
-Pikachu
-Level: 16
+Azumarill @ Sitrus Berry
+Ability: Huge Power
+Level: 25
+Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bounce
+- Bubble Beam
+- Defense Curl
+- Rollout
+
+Baltoy @ Oran Berry
+Ability: Levitate
+Level: 24
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ancient Power
+- Mud Shot
+- Psybeam
+- Teleport
+
+Swellow @ Oran Berry
+Ability: Guts
+Level: 23
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aerial Ace
+- Agility
+- Endeavor
+- Double Team
+
+Jynx @ Starf Berry
+Ability: Dry Skin
+Level: 23
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Lovely Kiss
+- Confusion
+- Powder Snow
+- Sweet Kiss
+
+Pineco @ Custap Berry
+Ability: Sturdy
+Level: 23
+Relaxed Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Magnet Bomb
+- Bug Bite
+- Self Destruct
+- Defense Curl
 
 === TRAINER_PICNICKER_ISABELLE ===
 Name: ISABELLE
@@ -2690,17 +3641,65 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Pidgey
-Level: 16
+Nuzleaf @ Oran Berry
+Ability: Pickpocket
+Level: 23
+Quiet Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Razor Leaf
+- Payback
+- Growth
+- Mega Drain
 
-Pidgey
-Level: 16
+Kirlia @ Lum Berry
+Ability: Synchronize
+Level: 24
+Naive Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Meditate
+- Rolling Kick
+- Psybeam
+- Draining Kiss
 
-Pidgey
-Level: 16
+Phanpy @ Oran Berry
+Ability: Battle Armor
+Level: 23
+Impish Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Rollout
+- Defense Curl
+- Charm
+
+Poliwhirl @ Sitrus Berry
+Ability: Swift Swim
+Level: 25
+Mild Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rain Dance
+- Bubble Beam
+- Slam
+- Mud Shot
+
+Stantler @ Oran Berry
+Ability: Sap Sipper
+Level: 23
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Take Down
+- Hypnosis
+- Confusion
+- Horn Attack
+
+Mawile @ Starf Berry
+Ability: Huge Power
+Level: 24
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bullet Punch
+- Stockpile
+- Baton Pass
+- Metal Claw
 
 === TRAINER_PICNICKER_KELSEY ===
 Name: KELSEY
@@ -2708,16 +3707,68 @@ Class: Picnicker
 Pic: Picnicker
 Gender: Male
 Music: Girl
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Nidoran M
-Level: 15
+Nidorino @ Persim Berry
+Ability: Sheer Force
+Level: 23
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thrash
+- Bite
+- Focus Energy
+- Helping Hand
 
-Nidoran F
-Level: 15
+Nidorina @ Oran Berry
+Ability: Sheer Force
+Level: 23
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Superpower
+- Mud Shot
+- Bite
+- Helping Hand
+
+Jigglypuff @ Oran Berry
+Ability: Punk Rock
+Level: 22
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Echoed Voice
+- Sing
+- Metal Sound
+- Disarming Voice
+
+Sableye @ Oran Berry
+Ability: Prankster
+Level: 22
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Night Shade
+- Quash
+- Disable
+- Torment
+
+Masquerain @ Sitrus Berry
+Ability: Intimidate
+Level: 24
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Stun Spore
+- Haze
+- Bubble Beam
+- Struggle Bug
+
+Corphish @ Oran Berry
+Ability: Shell Armor
+Level: 22
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Double Hit
+- Bubble Beam
+- Bite
+- Taunt
 
 === TRAINER_PICNICKER_ALICIA ===
 Name: ALICIA
@@ -3008,12 +4059,44 @@ Double Battle: No
 AI: Smart Trainer
 
 Magnemite
-Level: 11
+Ability: Magnet Pull
+Level: 17
+Bold Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thundershock
+- Supersonic
+- Metal Sound
+- Thunder Wave
 
 Voltorb
-Level: 11
+Ability: Soundproof
+Level: 17
+Naughty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Self Destruct
+- Spark
+- Rollout
+- Screech
+
+Electrike
+Ability: Lightning Rod
+Level: 17
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thundershock
+- Ember
+- Bite
+- Quick Attack
+
+Elekid
+Ability: Static
+Level: 16
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thundershock
+- Swift
+- Comet Punch
+- Charge
 
 === TRAINER_SUPER_NERD_MIGUEL ===
 Name: MIGUEL
@@ -3025,16 +4108,64 @@ Double Battle: No
 AI: Smart Trainer
 
 Grimer
-Level: 12
+Ability: Poison Touch
+Level: 16
+Quiet Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Acid Spray
+- Mud Slap
+- Disable
+- Poison Gas
 
-Voltorb
-Level: 12
+Pikachu @ Light Ball
+Ability: Static
+Level: 17
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Electro Ball
+- Thunder Wave
+- Quick Attack
+- Sweet Kiss
 
 Koffing
-Level: 12
+Ability: Levitate
+Level: 16
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sludge
+- Ember
+- Assurance
+- Clear Smog
+
+Flaaffy
+Ability: Overcoat
+Level: 16
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Charge Beam
+- Take Down
+- Thunder Wave
+- Cotton Spore
+
+Gulpin @ Oran Berry
+Ability: Liquid Ooze
+Level: 17
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sludge
+- Ember
+- Encore
+- Yawn
+
+Skarmory
+Ability: Full Metal Body
+Level: 16
+Careful Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aerial Ace
+- Metal Claw
+- Whirlwind
+- Leer
 
 === TRAINER_SUPER_NERD_AIDAN ===
 Name: AIDAN
@@ -3263,17 +4394,55 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Geodude
-Level: 10
+Geodude @ Custap Berry
+Ability: Sturdy
+Level: 15
+Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Self Destruct
+- Bulldoze
+- Rock Throw
+- Defense Curl
 
-Geodude
-Level: 10
+Machop @ Custap Berry
+Ability: Guts
+Level: 16
+Lonely Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Karate Chop
+- Revenge
+- Focus Energy
+- Dizzy Punch
 
-Onix
-Level: 10
+Onix @ Custap Berry
+Ability: Sturdy
+Level: 15
+Naughty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rock Throw
+- Sand Tomb
+- Take Down
+- Screech
+
+Nosepass @ Custap Berry
+Ability: Sturdy
+Level: 17
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thunder Wave
+- Rock Throw
+- Block
+- Magnet Rise
+
+Aron @ Custap Berry
+Ability: Sturdy
+Level: 15
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Headbutt
+- Rock Tomb
+- Metal Claw
+- Mud Slap
 
 === TRAINER_HIKER_FRANKLIN ===
 Name: FRANKLIN
@@ -3284,13 +4453,65 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Machop
-Level: 15
+Nosepass @ Magnet
+Ability: Magnet Pull
+Level: 22
+Quiet Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Thundershock
+- Rock Tomb
+- Thunder Wave
+- Gravity
 
-Geodude
-Level: 15
+Geodude @ Custap Berry
+Ability: Sturdy
+Level: 23
+Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Magnitude
+- Rock Tomb
+- Rock Polish
+- Self Destruct
+
+Hitmonchan @ Black Belt
+Ability: Iron Fist
+Level: 24
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Detect
+- Mach Punch
+- Low Sweep
+- Rock Smash
+
+Kabuto @ Oran Berry
+Ability: Weak Armor
+Level: 22
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Gun
+- Absorb
+- Rock Tomb
+- Metal Sound
+
+Anorith @ Oran Berry
+Ability: Swift Swim
+Level: 22
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bug Bite
+- Rock Tomb
+- Metal Claw
+- Sand Attack
+
+Gligar @ Sitrus Berry
+Ability: Immunity
+Level: 23
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sand Tomb
+- Poison Tail
+- Aerial Ace
+- Knock Off
 
 === TRAINER_HIKER_NOB ===
 Name: NOB
@@ -3326,9 +4547,65 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Onix
-Level: 17
+Shuckle @ Custap Berry
+Ability: Sturdy
+Level: 22
+Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Power Trick
+- Rock Throw
+- Bug Bite
+- Safeguard
+
+Larvitar @ Sitrus Berry
+Ability: Guts
+Level: 24
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Iron Defense
+- Smack Down
+- Bulldoze
+- Fire Fang
+
+Onix @ Passho Berry
+Ability: Rock Head
+Level: 23
+Careful Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Take Down
+- Smack Down
+- Dragon Breath
+- Rock Polish
+
+Lileep @ Oran Berry
+Ability: Storm Drain
+Level: 22
+Mild Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mega Drain
+- Rock Tomb
+- Brine
+- Leech Seed
+
+Hitmonlee @ Oran Berry
+Ability: Unburden
+Level: 22
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Double Kick
+- Low Sweep
+- Mach Punch
+- Foresight
+
+Slugma @ Oran Berry
+Ability: Flame Body
+Level: 23
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Wheel
+- Rock Tomb
+- Clear Smog
+- Yawn
 
 === TRAINER_HIKER_ALAN ===
 Name: ALAN
@@ -4444,13 +5721,65 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Horsea
-Level: 16
+Horsea @ Scope Lens
+Ability: Sniper
+Level: 19
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Twister
+- Focus Energy
+- Smog
 
-Shellder
-Level: 16
+Shellder @ Metronome
+Ability: Shell Armor
+Level: 18
+Naughty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ice Ball
+- Whirlpool
+- Supersonic
+- Withdraw
+
+Remoraid @ White Herb
+Ability: Moody
+Level: 18
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Ember
+- Aurora Beam
+- Psybeam
+
+Marshtomp @ Sitrus Berry
+Ability: Mold Breaker
+Level: 20
+Relaxed Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Yawn
+- Mud Shot
+- Water Pulse
+- Rock Throw
+
+Wingull @ Damp Rock
+Ability: Hydration
+Level: 19
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rain Dance
+- Wing Attack
+- Water Pulse
+- Supersonic
+
+Marill @ Oran Berry
+Ability: Huge Power
+Level: 18
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bubble Beam
+- Rollout
+- Defense Curl
+- Tail Whip
 
 === TRAINER_SWIMMER_MALE_RICHARD ===
 Name: RICHARD
@@ -6206,7 +7535,7 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer
 
 Squirtle
 Ability: Torrent
@@ -6221,12 +7550,12 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer
 
 Bulbasaur
 Ability: Overgrow
 Level: 5
-Modest Nature
+Bashful Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 === TRAINER_RIVAL_OAKS_LAB_CHARMANDER ===
@@ -6236,7 +7565,7 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer
 
 Charmander
 Ability: Blaze
@@ -6251,7 +7580,7 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer
 
 Rattata
 Ability: Hustle
@@ -6310,7 +7639,7 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer
 
 Rattata
 Ability: Hustle
@@ -6355,7 +7684,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Bulbasaur
 Ability: Overgrow
 Level: 10
-Modest Nature
+Bashful Nature
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Worry Seed
 - Leech Seed
@@ -6369,7 +7698,7 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Basic Trainer
 
 Rattata
 Ability: Hustle
@@ -6430,33 +7759,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pidgeotto
-Level: 17
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Tackle
-- Sand Attack
+Pidgeotto @ Oran Berry
+Ability: Big Pecks
+Level: 20
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thundershock
+- Feather Dance
 - Gust
 - Quick Attack
 
-Abra
-Level: 16
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Teleport
-
-Rattata
-Level: 15
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Tackle
-- Tail Whip
-- Quick Attack
-
-Squirtle
+Kadabra @ Cheri Berry
+Ability: Magic Guard
 Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Tackle
-- Tail Whip
-- Withdraw
-- Water Gun
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Reflect
+- Disable
+- Confusion
+- Kinesis
+
+Exeggcute @ Oran Berry
+Ability: Harvest
+Level: 21
+Quiet Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Mega Drain
+- Reflect
+- Leech Seed
+- Light Screen
+
+Raticate @ Cheri Berry
+Ability: Hustle
+Level: 20
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hyper Fang
+- Hone Claws
+- Quick Attack
+- Assurance
+
+Eevee @ Oran Berry
+Ability: Adaptability
+Level: 20
+Docile Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Covet
+- Copycat
+- Quick Attack
+- Baby Doll Eyes
+
+Wartortle @ Oran Berry
+Ability: Torrent
+Level: 21
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Water Pulse
+- Rapid Spin
+- Safeguard
+- Bite
 
 === TRAINER_RIVAL_CERULEAN_BULBASAUR ===
 Name: TERRY
@@ -6467,32 +7828,64 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pidgeotto
-Level: 17
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Tackle
-- Sand Attack
+Pidgeotto @ Oran Berry
+Ability: Big Pecks
+Level: 20
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thundershock
+- Feather Dance
 - Gust
 - Quick Attack
 
-Abra
-Level: 16
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Teleport
-
-Rattata
-Level: 15
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Tackle
-- Tail Whip
-- Quick Attack
-
-Bulbasaur
+Kadabra @ Cheri Berry
+Ability: Magic Guard
 Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Reflect
+- Disable
+- Confusion
+- Kinesis
+
+Exeggcute @ Oran Berry
+Ability: Harvest
+Level: 21
+Quiet Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Mega Drain
+- Reflect
+- Leech Seed
+- Light Screen
+
+Raticate @ Cheri Berry
+Ability: Hustle
+Level: 20
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hyper Fang
+- Hone Claws
+- Quick Attack
+- Assurance
+
+Eevee @ Oran Berry
+Ability: Adaptability
+Level: 20
+Docile Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Covet
+- Copycat
+- Quick Attack
+- Baby Doll Eyes
+
+Ivysaur @ Oran Berry
+Ability: Overgrow
+Level: 21
+Bashful Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sleep Powder
 - Poison Powder
-- Vine Whip
+- Razor Leaf
 - Leech Seed
 
 === TRAINER_RIVAL_CERULEAN_CHARMANDER ===
@@ -6504,33 +7897,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pidgeotto
-Level: 17
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Tackle
-- Sand Attack
+Pidgeotto @ Oran Berry
+Ability: Big Pecks
+Level: 20
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thundershock
+- Feather Dance
 - Gust
 - Quick Attack
 
-Abra
-Level: 16
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Teleport
-
-Rattata
-Level: 15
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Tackle
-- Tail Whip
-- Quick Attack
-
-Charmander
+Kadabra @ Cheri Berry
+Ability: Magic Guard
 Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Reflect
+- Disable
+- Confusion
+- Kinesis
+
+Exeggcute @ Oran Berry
+Ability: Harvest
+Level: 21
+Quiet Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Mega Drain
+- Reflect
+- Leech Seed
+- Light Screen
+
+Raticate @ Cheri Berry
+Ability: Hustle
+Level: 20
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hyper Fang
+- Hone Claws
+- Quick Attack
+- Assurance
+
+Eevee @ Oran Berry
+Ability: Adaptability
+Level: 20
+Docile Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Covet
+- Copycat
+- Quick Attack
+- Baby Doll Eyes
+
+Charmeleon @ Oran Berry
+Ability: Blaze
+Level: 21
+Hasty Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Metal Claw
-- Ember
-- Growl
-- Scratch
+- Slash
+- Flame Charge
+- Dragon Breath
 
 === TRAINER_SCIENTIST_TED ===
 Name: TED
@@ -6966,13 +8391,65 @@ Music: Aqua
 Double Battle: No
 AI: Smart Trainer
 
-Rattata
-Level: 13
+Skitty @ Silk Scarf
+Ability: Normalize
+Level: 17
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Covet
+- Attract
+- Charm
+- Fake Out
 
-Zubat
-Level: 13
+Bayleef
+Ability: Overgrow
+Level: 16
+Bold Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Synthesis
+- Razor Leaf
+- Disarming Voice
+- Poison Powder
+
+Barboach
+Ability: Oblivious
+Level: 15
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Whirlpool
+- Rest
+- Snore
+- Mud Shot
+
+Combusken
+Ability: Speed Boost
+Level: 16
+Naughty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Charge
+- Double Kick
+- Sand Attack
+- Peck
+
+Larvitar @ Oran Berry
+Ability: Guts
+Level: 17
+Careful Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Bite
+- Smack Down
+- Scary Face
+
+Beldum
+Ability: Light Metal
+Level: 16
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Confusion
+- Take Down
+- Shelter
+- Bulldoze
 
 === TRAINER_TEAM_ROCKET_GRUNT_2 ===
 Name: GRUNT
@@ -6980,20 +8457,68 @@ Class: Team Rocket
 Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Sandshrew
-Level: 11
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-
-Rattata
-Level: 11
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-
 Zubat
-Level: 11
+Ability: Inner Focus
+Level: 16
+Naive Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Wing Attack
+- Bite
+- Absorb
+- Poison Sting
+
+Furret @ Oran Berry
+Ability: Friend Guard
+Level: 17
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Heal Pulse
+- Dizzy Punch
+- Follow Me
+- Tickle
+
+Numel
+Ability: Simple
+Level: 16
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Incinerate
+- Bulldoze
+- Rock Throw
+- Flame Charge
+
+Qwilfish
+Ability: Intimidate
+Level: 16
+Careful Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Fell Stinger
+- Poison Sting
+- Taunt
+- Minimize
+
+Spoink
+Ability: Thick Fat
+Level: 15
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Psybeam
+- Poison Gas
+- Venoshock
+- Payback
+
+Nuzleaf
+Ability: Pickpocket
+Level: 16
+Relaxed Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mega Drain
+- Growth
+- Rollout
+- Focus Energy
 
 === TRAINER_TEAM_ROCKET_GRUNT_3 ===
 Name: GRUNT
@@ -7004,13 +8529,65 @@ Music: Aqua
 Double Battle: No
 AI: Smart Trainer
 
-Zubat
-Level: 11
+Trapinch
+Ability: Hyper Cutter
+Level: 15
+Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Bite
+- Supersonic
+- Sand Attack
 
-Ekans
-Level: 11
+Paras
+Ability: Dry Skin
+Level: 16
+Lonely Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Pounce
+- Sleep Powder
+- Absorb
+- Sweet Scent
+
+Magby
+Ability: Flame Body
+Level: 16
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Wheel
+- Clear Smog
+- Low Kick
+- Scary Face
+
+Sableye
+Ability: Prankster
+Level: 17
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Disable
+- Mean Look
+- Torment
+- Thief
+
+Chinchou
+Ability: Volt Absorb
+Level: 16
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bubble Beam
+- Flash
+- Thunder Wave
+- Electro Ball
+
+Nidorina @ Oran Berry
+Ability: Poison Point
+Level: 17
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mud Shot
+- Bite
+- Double Kick
+- Poison Sting
 
 === TRAINER_TEAM_ROCKET_GRUNT_4 ===
 Name: GRUNT
@@ -7021,13 +8598,65 @@ Music: Aqua
 Double Battle: No
 AI: Smart Trainer
 
-Rattata
-Level: 13
+Meowth
+Ability: Technician
+Level: 17
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Pay Day
+- Bite
+- Fake Out
+- Screech
 
-Sandshrew
-Level: 13
+Seviper @ Oran Berry
+Ability: Strong Jaw
+Level: 17
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Poison Tail
+- Screech
+- Bite
+- Venom Drench
+
+Corphish
+Ability: Hyper Cutter
+Level: 16
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bite
+- Vise Grip
+- Water Gun
+- Taunt
+
+Shroomish
+Ability: Effect Spore
+Level: 15
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bullet Seed
+- Poison Powder
+- Leech Seed
+- Worry Seed
+
+Quilava @ Charcoal
+Ability: Flash Fire
+Level: 16
+Naughty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Wheel
+- Rollout
+- Defense Curl
+- Quick Attack
+
+Wynaut @ Oran Berry
+Ability: Shadow Tag
+Level: 16
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Counter
+- Mirror Coat
+- Safeguard
+- Destiny Bond
 
 === TRAINER_TEAM_ROCKET_GRUNT_5 ===
 Name: GRUNT
@@ -7038,13 +8667,65 @@ Music: Aqua
 Double Battle: No
 AI: Smart Trainer
 
-Machop
-Level: 17
+Machop @ Oran Berry
+Ability: Guts
+Level: 24
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Seismic Toss
+- Knock Off
+- Karate Chop
+- Scary Face
 
-Drowzee
-Level: 17
+Drowzee @ Sitrus Berry
+Ability: Bad Dreams
+Level: 25
+Naughty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Hypnosis
+- Heart Stamp
+- Thief
+- Psych Up
+
+Murkrow @ Sharp Beak
+Ability: Insomnia
+Level: 23
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Wing Attack
+- Low Sweep
+- Torment
+- Haze
+
+Huntail @ Berry Juice
+Ability: Water Veil
+Level: 23
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Razor Shell
+- Brine
+- Bite
+- Iron Defense
+
+Lileep @ Petaya Berry
+Ability: Storm Drain
+Level: 23
+Quiet Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rock Tomb
+- Mega Drain
+- Leech Seed
+- Brine
+
+Ariados @ Scope Lens
+Ability: Sniper
+Level: 24
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Poison Fang
+- Bug Bite
+- Absorb
+- Focus Energy
 
 === TRAINER_TEAM_ROCKET_GRUNT_6 ===
 Name: GRUNT
@@ -7055,13 +8736,65 @@ Music: Aqua
 Double Battle: No
 AI: Smart Trainer
 
-Ekans
-Level: 15
+Ledian @ Muscle Band
+Ability: Iron Fist
+Level: 19
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aerial Ace
+- U-turn
+- Safeguard
+- Bug Bite
 
-Zubat
-Level: 15
+Zubat @ Sitrus Berry
+Ability: Inner Focus
+Level: 21
+Hasty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Poison Fang
+- Wing Attack
+- Bite
+- Absorb
+
+Rhyhorn @ Passho Berry
+Ability: Rock Head
+Level: 19
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Take Down
+- Smack Down
+- Mud Slap
+- Rock Polish
+
+Mime Jr. @ Oran Berry
+Ability: Filter
+Level: 19
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Fairy Wind
+- Confusion
+- Encore
+- Copycat
+
+Carvanha @ Liechi Berry
+Ability: Speed Boost
+Level: 20
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aqua Cutter
+- Bite
+- Poison Fang
+- Aqua Jet
+
+Cacnea @ Salac Berry
+Ability: Water Absorb
+Level: 20
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Growth
+- Power Trip
+- Mega Drain
+- Sand Tomb
 
 === TRAINER_TEAM_ROCKET_GRUNT_7 ===
 Name: GRUNT
@@ -8994,25 +10727,68 @@ Class: Leader
 Pic: Leader Misty
 Gender: Male
 Music: Female
-Items: Super Potion
 Double Battle: No
 AI: Smart Trainer
 
-Staryu
-Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Tackle
-- Harden
-- Recover
+Luvdisc @ Petaya Berry
+Ability: Cute Charm
+Level: 19
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Water Pulse
+- Draining Kiss
+- Charm
+- Wish
 
-Starmie
-Level: 21
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Swift
-- Recover
-- Rapid Spin
+Quagsire @ Rindo Berry
+Ability: Water Absorb
+Level: 20
+Sassy Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Water Pulse
+- Mud Shot
+- Yawn
+- Acid Spray
+
+Togekiss @ Charti Berry
+Ability: Serene Grace
+Level: 19
+Naive Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Ancient Power
+- Draining Kiss
+- Aerial Ace
+- Yawn
+
+Corsola @ Leftovers
+Ability: Filter
+Level: 19
+Impish Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Life Dew
+- Take Heart
+- Water Pulse
+- Ancient Power
+
+Gyarados @ Sharp Beak
+Ability: Intimidate
+Level: 20
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Whirlpool
+- Bounce
+- Flail
+- Leer
+
+Starmie @ Sitrus Berry
+Ability: Natural Cure
+Level: 21
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Water Pulse
+- Confusion
+- Swift
+- Aqua Ring
 
 === TRAINER_LEADER_LT_SURGE ===
 Name: LT. SURGE
@@ -9214,16 +10990,68 @@ Class: Gentleman
 Pic: Gentleman
 Gender: Male
 Music: Rich
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Growlithe
-Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Vulpix @ Heat Rock
+Ability: Drought
+Level: 25
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sunny Day
+- Will O Wisp
+- Confusion
+- Incinerate
 
-Growlithe
-Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Sunflora @ Sitrus Berry
+Ability: Flower Gift
+Level: 26
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Solar Beam
+- Synthesis
+- Mega Drain
+- Growth
+
+Solrock @ Oran Berry
+Ability: Levitate
+Level: 24
+Mild Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sunny Day
+- Ancient Power
+- Incinerate
+- Hypnosis
+
+Growlithe @ Charcoal
+Ability: Intimidate
+Level: 25
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Retaliate
+- Flame Wheel
+- Double Kick
+- Roar
+
+Numel @ Oran Berry
+Ability: Simple
+Level: 24
+Quiet Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flame Burst
+- Slam
+- Shelter
+- Amnesia
+
+Bellossom @ Big Root
+Ability: Chlorophyll
+Level: 24
+Bold Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Purify
+- Stun Spore
+- Sludge
 
 === TRAINER_GENTLEMAN_ARTHUR ===
 Name: ARTHUR
@@ -9231,16 +11059,68 @@ Class: Gentleman
 Pic: Gentleman
 Gender: Male
 Music: Rich
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Nidoran M
-Level: 19
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Seviper @ Poison Barb
+Ability: Strong Jaw
+Level: 24
+Lonely Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Poison Fang
+- Glare
+- Screech
+- Bite
 
-Nidoran F
-Level: 19
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Zangoose @ Toxic Orb
+Ability: Toxic Boost
+Level: 25
+Naughty Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Slash
+- Metal Claw
+- Fury Cutter
+- Double Kick
+
+Nidoqueen @ Black Sludge
+Ability: Poison Point
+Level: 24
+Relaxed Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Toxic Spikes
+- Superpower
+- Mud Shot
+- Helping Hand
+
+Nidoking @ Life Orb
+Ability: Sheer Force
+Level: 24
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thrash
+- Bite
+- Poison Sting
+- Leer
+
+Ariados @ Scope Lens
+Ability: Sniper
+Level: 25
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Poison Fang
+- Bite
+- Bug Bite
+- Focus Energy
+
+Crobat @ Liechi Berry
+Ability: Inner Focus
+Level: 26
+Naive Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Confuse Ray
+- Wing Attack
+- Poison Fang
+- Absorb
 
 === TRAINER_GENTLEMAN_TUCKER ===
 Name: TUCKER
@@ -10377,13 +12257,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Rattata
-Level: 14
+Chimecho @ Oran Berry
+Ability: Filter
+Level: 22
+Modest Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Psybeam
+- Healing Wish
+- Yawn
+- Fairy Wind
 
-Ekans
-Level: 14
+Swellow @ Sitrus Berry
+Ability: Guts
+Level: 24
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Facade
+- Aerial Ace
+- Endeavor
+- Quick Attack
+
+Koffing @ Oran Berry
+Ability: Neutralizing Gas
+Level: 22
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sludge
+- Ember
+- Self Destruct
+- Assurance
+
+Dunsparce @ Custap Berry
+Ability: Serene Grace
+Level: 22
+Rash Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ancient Power
+- Bulldoze
+- Rollout
+- Flail
+
+Charmeleon @ Charcoal
+Ability: Blaze
+Level: 23
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Slash
+- Flame Charge
+- Dragon Breath
+- Metal Claw
+
+Quagsire @ Oran Berry
+Ability: Unaware
+Level: 23
+Relaxed Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Yawn
+- Slam
+- Mud Shot
 
 === TRAINER_PICNICKER_MISSY ===
 Name: MISSY
