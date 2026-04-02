@@ -1629,9 +1629,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Nidoran M
-Level: 21
+Chimecho @ Light Clay
+Ability: Levitate
+Level: 24
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Light Screen
+- Reflect
+- Psybeam
+- Yawn
+
+Grimer @ Black Sludge
+Ability: Toxic Debris
+Level: 24
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Minimize
+- Corrosive Gas
+- Acid Spray
+- Mud Shot
+
+Vigoroth @ Salac Berry
+Ability: Vital Spirit
+Level: 26
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Slash
+- Encore
+- Slack Off
+- Endure
+
+Houndoom @ Cheri Berry
+Ability: Flash Fire
+Level: 24
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Charge
+- Thunder Fang
+- Howl
+- Bite
+
+Ledian @ Black Belt
+Ability: Iron Fist
+Level: 25
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mach Punch
+- Roost
+- U-turn
+- Aerial Ace
+
+Delibird @ Apicot Berry
+Ability: Vital Spirit
+Level: 25
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Drill Peck
+- Ice Spinner
+- Rock Throw
+- Natural Gift
 
 === TRAINER_YOUNGSTER_EDDIE ===
 Name: EDDIE
@@ -2832,13 +2888,65 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Rattata
-Level: 18
+Croconaw @ Sitrus Berry
+Ability: Strong Jaw
+Level: 24
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Slash
+- Air Cutter
+- Aqua Ring
+- Safeguard
 
-Pikachu
-Level: 18
+Meowth @ Sitrus Berry
+Ability: Limber
+Level: 24
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Air Cutter
+- Aqua Ring
+- Safeguard
+
+Grovyle @ Sitrus Berry
+Ability: Unburden
+Level: 24
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Air Cutter
+- Aqua Ring
+- Safeguard
+
+Hariyama @ Sitrus Berry
+Ability: Analytic
+Level: 25
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Air Cutter
+- Aqua Ring
+- Safeguard
+
+Lunatone @ Sitrus Berry
+Ability: Levitate
+Level: 25
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Air Cutter
+- Aqua Ring
+- Safeguard
+
+Togekiss @ Sitrus Berry
+Ability: Serene Grace
+Level: 26
+Calm Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Air Cutter
+- Aqua Ring
+- Safeguard
 
 === TRAINER_LASS_PAIGE ===
 Name: PAIGE
@@ -5491,20 +5599,68 @@ Class: Fisherman
 Pic: Fisherman
 Gender: Male
 Music: Hiker
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Goldeen
-Level: 17
+Politoed @ Damp Rock
+Ability: Drizzle
+Level: 25
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rain Dance
+- Bubble Beam
+- Confuse Ray
+- Mud Shot
 
-Tentacool
-Level: 17
+Corsola @ Sitrus Berry
+Ability: Filter
+Level: 26
+Bold Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bubble Beam
+- Take Heart
+- Life Dew
+- Ancient Power
 
-Goldeen
-Level: 17
+Wartortle @ Liechi Berry
+Ability: Rain Dish
+Level: 24
+Impish Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rapid Spin
+- Razor Shell
+- Bite
+- Protect
+
+Relicanth @ Chesto Berry
+Ability: Swift Swim
+Level: 24
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Rock Throw
+- Dive
+- Rest
+
+Castform @ Never Melt Ice
+Ability: Forecast
+Level: 25
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rain Dance
+- Water Gun
+- Thundershock
+- Powder Snow
+
+Anorith @ White Herb
+Ability: Swift Swim
+Level: 24
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Smack Down
+- Metal Claw
+- Bug Bite
+- Ancient Power
 
 === TRAINER_FISHERMAN_BARNY ===
 Name: BARNY
@@ -12516,9 +12672,65 @@ Music: Rich
 Double Battle: No
 AI: Smart Trainer
 
-Pikachu
-Level: 23
+Tropius @ Sitrus Berry
+Ability: Harvest
+Level: 24
+Mild Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Slam
+- Air Cutter
+- Magical Leaf
+- Dragon Tail
+
+Breloom @ Black Belt
+Ability: Technician
+Level: 25
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mach Punch
+- Bullet Seed
+- Poison Fang
+- Leech Seed
+
+Lileep @ Sitrus Berry
+Ability: Storm Drain
+Level: 25
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ancient Power
+- Mega Drain
+- Brine
+- Leech Seed
+
+Ludicolo @ Salac Berry
+Ability: Dancer
+Level: 24
+Rash Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flail
+- Teeter Dance
+- Mega Drain
+- Bubble Beam
+
+Exeggutor @ Petaya Berry
+Ability: Harvest
+Level: 24
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Confusion
+- Mega Drain
+- Reflect
+- Light Screen
+
+Roserade @ Miracle Seed
+Ability: Technician
+Level: 26
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Magical Leaf
+- Acid Spray
+- Stun Spore
+- Worry Seed
 
 === TRAINER_GENTLEMAN_LAMAR ===
 Name: LAMAR

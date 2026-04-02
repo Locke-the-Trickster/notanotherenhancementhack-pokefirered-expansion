@@ -617,7 +617,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Flies up on the\nfirst turn, "
             "then\nstrikes the next\nturn."),
-        .effect = EFFECT_SEMI_INVULNERABLE,
+        .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 90 : 70,
         .type = TYPE_FLYING,
         .accuracy = 100,
@@ -674,7 +674,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Slams the foe with\na long "
             "tail, vine,\netc."),
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 70,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
@@ -2500,17 +2500,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Digs underground\nthe first "
             "turn and\nstrikes next turn."),
-        .effect = EFFECT_SEMI_INVULNERABLE,
+        .effect = EFFECT_HIT,
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .power = 80,
+            .power = 60,
         #elif B_UPDATED_MOVE_DATA >= GEN_2
             .power = 60,
         #else
-            .power = 100,
+            .power = 60,
         #endif
         .type = TYPE_GROUND,
         .accuracy = 100,
-        .pp = 10,
+        .pp = 25,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -7861,11 +7861,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Dives underwater\nthe first "
             "turn and\nstrikes next turn."),
-        .effect = EFFECT_SEMI_INVULNERABLE,
-        .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 80 : 60,
+        .effect = EFFECT_HIT,
+        .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 60 : 60,
         .type = TYPE_WATER,
         .accuracy = 100,
-        .pp = 10,
+        .pp = 25,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -8752,7 +8752,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "An unavoidable\npunch that "
             "is\nthrown from\nshadows."),
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 60,
         .type = TYPE_GHOST,
         .accuracy = 0,
         .pp = 20,
@@ -9127,11 +9127,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Bounces up, then\ndown the "
             "next\nturn. May\nparalyze."),
-        .effect = EFFECT_SEMI_INVULNERABLE,
-        .power = 85,
+        .effect = EFFECT_HIT,
+        .power = 80,
         .type = TYPE_FLYING,
         .accuracy = 100,
-        .pp = 5,
+        .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -9143,7 +9143,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .argument.twoTurnAttack = { .stringId =  STRINGID_PKMNSPRANGUP, .status = STATE_ON_AIR },
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_PARALYSIS,
-            .chance = 30,
+            .chance = 10,
         }),
         .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -14666,11 +14666,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Phantom Force"),
         .description = sShadowForceDescription,
-        .effect = EFFECT_SEMI_INVULNERABLE,
+        .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_GHOST,
         .accuracy = 100,
-        .pp = 10,
+        .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
