@@ -444,8 +444,8 @@ static void AddSearchWindow(u8 width)
 }
 
 #define WINDOW_COL_0        (SPECIES_ICON_X + 4)
-#define WINDOW_COL_1        (WINDOW_COL_0 + (GetFontAttribute(FONT_SMALL, FONTATTR_MAX_LETTER_WIDTH) * (POKEMON_NAME_LENGTH)))
-#define WINDOW_MOVE_NAME_X  (WINDOW_COL_1 + (GetFontAttribute(FONT_SMALL, FONTATTR_MAX_LETTER_WIDTH) * 6))
+#define WINDOW_COL_1        (WINDOW_COL_0 + (5 * (POKEMON_NAME_LENGTH)))
+#define WINDOW_MOVE_NAME_X  (WINDOW_COL_1 + (5 * 6))
 #define SEARCH_ARROW_X      212
 #define SEARCH_ARROW_Y      0
 
@@ -920,8 +920,6 @@ static void DexNavUpdateDirectionArrow(void)
             str = sText_ArrowDown;  //player above
     }
 
-    DebugPrintfLevel(MGBA_LOG_ERROR, "Arrow x: %u", arrowX);
-    DebugPrintfLevel(MGBA_LOG_ERROR, "Arrow y: %u", arrowY);
     AddTextPrinterParameterized3(windowId, FONT_NORMAL, arrowX, arrowY, sSearchFontColor, TEXT_SKIP_DRAW, str);
     CopyWindowToVram(windowId, 2);
 }
@@ -1099,7 +1097,6 @@ bool32 OnStep_DexNavSearch(void)
         return FALSE;
     }
 
-    DebugPrintfLevel(MGBA_LOG_ERROR, "prox: %d", sDexNavSearchDataPtr->proximity);
     if (sDexNavSearchDataPtr->proximity < 1)
     {
         gDexNavSpecies = sDexNavSearchDataPtr->species;
@@ -1191,7 +1188,6 @@ static void CreateDexNavWildMon(enum Species species, u8 potential, u8 level, u8
     u8 i;
     u8 perfectIv = 31;
 
-    DebugPrintfLevel(MGBA_LOG_ERROR, "create");
     CreateWildMon(species, level, 0);  // shiny rate bonus handled in CreateBoxMon
 
     // Pick random, unique IVs to set to 31. The number of perfect IVs that are assigned is equal to the potential
@@ -2150,7 +2146,7 @@ static void PrintCurrentSpeciesInfo(void)
         if (GetSpeciesAbility(species, 2) != ABILITY_NONE)
             AddTextPrinterParameterized3(WINDOW_INFO, FONT_SMALL, 0, HA_INFO_Y, sFontColor_Black, 0, gAbilitiesInfo[GetSpeciesAbility(species, 2)].name);
         else
-            AddTextPrinterParameterized3(WINDOW_INFO, FONT_SMALL, 0, HA_INFO_Y, sFontColor_Black, 0, gText_PokeSum_Item_None);
+            AddTextPrinterParameterized3(WINDOW_INFO, FONT_SMALL, 0, HA_INFO_Y, sFontColor_Black, 0, gText_None);
     }
     else
     {

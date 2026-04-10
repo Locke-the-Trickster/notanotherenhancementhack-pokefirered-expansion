@@ -377,7 +377,7 @@ u8 GetLeadMonFriendship(void)
         return 0;
 }
 
-void ShowTownMap(void)
+void FieldShowRegionMap(void)
 {
     QuestLog_CutRecording();
     InitRegionMapWithExitCB(REGIONMAP_TYPE_WALL, CB2_ReturnToFieldContinueScriptPlayMapMusic);
@@ -751,12 +751,6 @@ bool8 IsMonOTNameNotPlayers(void)
         return FALSE;
     else
         return TRUE;
-}
-
-// Used to nop all the unused specials from RS
-void NullFieldSpecial(void)
-{
-
 }
 
 void DoPicboxCancel(void)
