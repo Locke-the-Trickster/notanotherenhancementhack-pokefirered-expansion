@@ -1064,7 +1064,7 @@ void ClosePokemon(u32 sourceLine);
 
 void RNGSeed_(u32 sourceLine, rng_value_t seed);
 void AIFlags_(u32 sourceLine, u64 flags);
-void BattlerAIFlags_(u32 sourceLine, enum BattlerId battler, u64 flags);
+void BattlerAIFlags_(u32 sourceLine, struct BattlePokemon *battler, u64 flags);
 void AILogScores(u32 sourceLine);
 void Gender_(u32 sourceLine, u32 gender);
 void Nature_(u32 sourceLine, u32 nature);
@@ -1229,8 +1229,7 @@ void SendOut(u32 sourceLine, struct BattlePokemon *, u32 partyIndex);
 #define HP_BAR(battler, ...) QueueHP(__LINE__, battler, (struct HPEventContext) { R_APPEND_TRUE(__VA_ARGS__) })
 #define SUB_HIT(battler, ...) QueueSubHit(__LINE__, battler, (struct SubHitEventContext) { R_APPEND_TRUE(__VA_ARGS__) })
 #define EXPERIENCE_BAR(battler, ...) QueueExp(__LINE__, battler, (struct ExpEventContext) { R_APPEND_TRUE(__VA_ARGS__) })
-// Static const is needed to make the modern compiler put the pattern variable in the .rodata section, instead of putting it on stack(which can break the game).
-#define MESSAGE(pattern) do {static const u8 msg[] = _(pattern); QueueMessage(__LINE__, msg);} while (0)
+#define MESSAGE(pattern) QueueMessage(__LINE__, COMPOUND_STRING(pattern))
 #define STATUS_ICON(battler, status) QueueStatus(__LINE__, battler, (struct StatusEventContext) { status })
 #define CATCHING_CHANCE(address) QueueCatchingChance(__LINE__, address)
 #define FREEZE_OR_FROSTBURN_STATUS(battler, isFrostbite) \
