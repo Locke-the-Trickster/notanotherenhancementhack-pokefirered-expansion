@@ -539,7 +539,7 @@
 #define FLAG_HIDE_SSANNE_B1F_ROOM1_ADAMANT_MINT                 0x205
 #define FLAG_HIDE_SSANNE_DECK_MODEST_MINT                       0x206
 #define FLAG_HIDE_HIDDEN_MEADOW_BIG_ROOT                        0x207
-#define FLAG_0x208               0x208
+#define FLAG_HIDE_VERMILION_CITY_SHELL_BELL                     0x208
 #define FLAG_0x209               0x209
 #define FLAG_0x20A               0x20A
 #define FLAG_0x20B               0x20B

@@ -75,6 +75,10 @@ Route25_EventScript_ItemTM43::
 	finditem ITEM_TM43
 	end
 
+VermilionCity_EventScript_ItemShellBell::
+	finditem ITEM_SHELL_BELL
+	end
+
 SSAnne_1F_Room2_EventScript_ItemTM31::
 	finditem ITEM_TM31
 	end

@@ -468,7 +468,7 @@ Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Sucker Punch
 - Dig
-- Bulldoze
+- Magnitude
 - Astonish
 
 Ditto @ Quick Powder
@@ -1766,65 +1766,65 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Croconaw @ Sitrus Berry
+Croconaw @ Muscle Band
 Ability: Strong Jaw
 Level: 24
-Calm Nature
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Dive
 - Slash
-- Air Cutter
-- Aqua Ring
-- Safeguard
+- Ice Fang
+- Bite
 
-Meowth @ Sitrus Berry
+Meowth @ Silk Scarf
 Ability: Limber
 Level: 24
-Calm Nature
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Water Pulse
-- Air Cutter
-- Aqua Ring
-- Safeguard
+- Hone Claws
+- Taunt
+- Pay Day
+- Bite
 
-Grovyle @ Sitrus Berry
+Grovyle @ Berry Juice
 Ability: Unburden
 Level: 24
-Calm Nature
+Lonely Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Water Pulse
-- Air Cutter
-- Aqua Ring
-- Safeguard
+- Detect
+- Bullet Seed
+- Fury Cutter
+- Screech
 
-Hariyama @ Sitrus Berry
+Hariyama @ Lagging Tail
 Ability: Analytic
 Level: 25
-Calm Nature
+Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Water Pulse
-- Air Cutter
-- Aqua Ring
-- Safeguard
+- Knock Off
+- Force Palm
+- Fake Out
+- Circle Throw
 
-Lunatone @ Sitrus Berry
+Lunatone @ Petaya Berry
 Ability: Levitate
 Level: 25
-Calm Nature
+Modest Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Water Pulse
-- Air Cutter
-- Aqua Ring
-- Safeguard
+- Moonlight
+- Ancient Power
+- Confusion
+- Hypnosis
 
-Togekiss @ Sitrus Berry
+Togekiss @ Metronome
 Ability: Serene Grace
 Level: 26
-Calm Nature
+Bold Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Water Pulse
-- Air Cutter
-- Aqua Ring
-- Safeguard
+- Gust
+- Draining Kiss
+- Ancient Power
+- Metronome
 
 === TRAINER_LASS_PAIGE ===
 Name: PAIGE
@@ -1953,13 +1953,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Machop
-Level: 18
+Mankey @ Salac Berry
+Ability: Defiant
+Level: 24
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Swagger
+- Screech
+- Karate Chop
+- Rage Fist
 
-Shellder
-Level: 18
+Sneasel @ Dread Plate
+Ability: Pickpocket
+Level: 24
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Fling
+- Assurance
+- Ice Ball
+- Quick Attack
+
+Hitmontop @ Leftovers
+Ability: Intimidate
+Level: 25
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Triple Kick
+- Foresight
+- Focus Energy
+- Mach Punch
+
+Meditite @ Choice Scarf
+Ability: Pure Power
+Level: 24
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ice Punch
+- Force Palm
+- Psybeam
+- Fire Punch
+
+Combusken @ Liechi Berry
+Ability: Speed Boost
+Level: 25
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flame Wheel
+- Aerial Ace
+- Double Kick
+- Detect
+
+Farfetchd @ Leek
+Ability: Super Luck
+Level: 26
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aerial Ace
+- Knock Off
+- Karate Chop
+- Cut
 
 === TRAINER_SAILOR_TREVOR ===
 Name: TREVOR
@@ -1984,12 +2036,66 @@ Class: Sailor
 Pic: Sailor
 Gender: Male
 Music: Male
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Shellder
-Level: 21
+Aipom @ Salac Berry
+Ability: Technician
+Level: 24
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Fling
+- Baton Pass
+- Covet
+- Fake Out
+
+Psyduck @ Berry Juice
+Ability: Damp
+Level: 25
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Ally Switch
+- Kinesis
+
+Shellder @ Metronome
+Ability: Shell Armor
+Level: 24
+Lonely Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Spikes
+- Protect
+- Ice Ball
+- Supersonic
+
+Azumarill @ Sitrus Berry
+Ability: Sap Sipper
+Level: 25
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bounce
+- Charm
+- Rollout
+- Bubble Beam
+
+Clamperl @ Deep Sea Tooth
+Ability: Weak Armor
+Level: 26
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Draining Kiss
+- Chilling Water
+- Psybeam
+- Iron Defense
+
+Quagsire @ Rindo Berry
+Ability: Water Absorb
+Level: 24
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mud Bomb
+- Water Pulse
+- Yawn
+- Acid Spray
 
 === TRAINER_SAILOR_DUNCAN ===
 Name: DUNCAN
@@ -2000,17 +2106,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Horsea
-Level: 17
+Krabby @ Binding Band
+Ability: Hyper Cutter
+Level: 24
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Metal Claw
+- Clamp
+- Stomp
+- Leer
 
-Shellder
-Level: 17
+Chinchou @ Leftovers
+Ability: Volt Absorb
+Level: 24
+Careful Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aqua Ring
+- Thunder Wave
+- Confuse Ray
+- Spark
 
-Tentacool
-Level: 17
+Tentacool @ Sitrus Berry
+Ability: Clear Body
+Level: 24
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Hex
+- Poison Gas
+- Water Pulse
+- Acid Spray
+
+Horsea @ Lansat Berry
+Ability: Sniper
+Level: 25
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bubble Beam
+- Dragon Breath
+- Laser Focus
+- Smog
+
+Poliwrath @ Weakness Policy
+Ability: Swift Swim
+Level: 26
+Rash Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rain Dance
+- Bubble Beam
+- Slam
+- Mud Shot
+
+Carvanha @ Black Glasses
+Ability: Speed Boost
+Level: 25
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aqua Cutter
+- Ice Fang
+- Bite
+- Screech
 
 === TRAINER_SAILOR_HUEY ===
 Name: HUEY
@@ -2021,13 +2175,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Tentacool
-Level: 18
+Octillery @ White Herb
+Ability: Moody
+Level: 25
+Modest Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bubble Beam
+- Aurora Beam
+- Bullet Seed
+- Mirror Shot
 
-Staryu
-Level: 18
+Corphish @ Razor Claw
+Ability: Hyper Cutter
+Level: 24
+Naughty Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Double Hit
+- Bubble Beam
+- Bite
+- Taunt
+
+Spheal @ Chesto Berry
+Ability: Thick Fat
+Level: 24
+Bold Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rest
+- Sleep Talk
+- Chilling Water
+- Powder Snow
+
+Luvdisc @ Petaya Berry
+Ability: Cute Charm
+Level: 24
+Mild Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sweet Kiss
+- Captivate
+- Water Pulse
+- Wish
+
+Qwilfish @ Sitrus Berry
+Ability: Intimidate
+Level: 25
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bubble Beam
+- Poison Tail
+- Fell Stinger
+- Minimize
+
+Starmie @ Twisted Spoon
+Ability: Natural Cure
+Level: 26
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Minimize
+- Confuse Ray
+- Miracle Eye
+- Confusion
 
 === TRAINER_SAILOR_DYLAN ===
 Name: DYLAN
@@ -2035,20 +2241,68 @@ Class: Sailor
 Pic: Sailor
 Gender: Male
 Music: Male
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Horsea
-Level: 17
+Seel @ Chesto Berry
+Ability: Hydration
+Level: 24
+Naive Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Brine
+- Chilling Water
+- Ice Shard
+- Rest
 
-Horsea
-Level: 17
+Pelipper @ Damp Rock
+Ability: Drizzle
+Level: 25
+Sassy Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Rain Dance
+- Agility
+- Water Pulse
+- Wing Attack
 
-Horsea
-Level: 17
+Goldeen @ Metronome
+Ability: Swift Swim
+Level: 24
+Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Horn Attack
+- Fury Cutter
+- Tail Whip
+- Rain Dance
+
+Huntail @ Berry Juice
+Ability: Swift Swim
+Level: 25
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Razor Shell
+- Ice Fang
+- Bite
+- Screech
+
+Omanyte @ Petaya Berry
+Ability: Swift Swim
+Level: 24
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Chilling Water
+- Mud Shot
+- Glare
+- Rollout
+
+Gorebyss @ Pixie Plate
+Ability: Hydration
+Level: 26
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Chilling Water
+- Psybeam
+- Draining Kiss
+- Iron Defense
 
 === TRAINER_SAILOR_PHILLIP ===
 Name: PHILLIP
@@ -2069,16 +2323,68 @@ Class: Sailor
 Pic: Sailor
 Gender: Male
 Music: Male
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Pikachu
-Level: 21
+Plusle @ Shuca Berry
+Ability: Plus
+Level: 25
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Electro Ball
+- Agility
+- Charge
+- Nuzzle
 
-Pikachu
-Level: 21
+Minun @ Focus Sash
+Ability: Minus
+Level: 25
+Calm Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Shock Wave
+- Play Nice
+- Helping Hand
+- Encore
+
+Nosepass @ Air Balloon
+Ability: Sturdy
+Level: 26
+Impish Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Magnet Rise
+- Magnetic Flux
+- Rock Tomb
+- Wide Guard
+
+Chinchou @ Rindo Berry
+Ability: Water Absorb
+Level: 26
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Confuse Ray
+- Bubble Beam
+- Flash
+- Spark
+
+Electrike @ Charcoal
+Ability: Static
+Level: 25
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Roar
+- Flame Charge
+- Bite
+- Thunder Fang
+
+Pidgeotto @ Sharp Beak
+Ability: Keen Eye
+Level: 27
+Jolly Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Shock Wave
+- Air Cutter
+- Feather Dance
+- Sand Attack
 
 === TRAINER_CAMPER_LIAM ===
 Name: LIAM
@@ -2525,7 +2831,7 @@ Level: 19
 Sassy Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Water Pulse
-- Bulldoze
+- Mud Bomb
 - Rock Throw
 - Tickle
 
@@ -3550,7 +3856,7 @@ Lonely Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Iron Defense
 - Smack Down
-- Bulldoze
+- Dig
 - Fire Fang
 
 Onix @ Passho Berry
@@ -4429,13 +4735,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Voltorb
-Level: 21
+Voltorb @ Petaya Berry
+Ability: Static
+Level: 25
+Timid Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Electro Ball
+- Charge Beam
+- Sonic Boom
+- Magnet Rise
 
-Magnemite
-Level: 21
+Magnemite @ Shuca Berry
+Ability: Analytic
+Level: 25
+Modest Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Shock Wave
+- Magnet Bomb
+- Metal Sound
+- Thunder Wave
+
+Pikachu @ Light Ball
+Ability: Lightning Rod
+Level: 26
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Electro Ball
+- Sweet Kiss
+- Charm
+- Thunder Wave
+
+Eevee @ Eject Button
+Ability: Adaptability
+Level: 25
+Rash Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Shock Wave
+- Swift
+- Copycat
+- Sand Attack
+
+Flaaffy @ Magnet
+Ability: Overcoat
+Level: 27
+Quiet Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Shock Wave
+- Dragon Breath
+- Cotton Spore
+- Charge Beam
+
+Electabuzz @ Salac Berry
+Ability: Vital Spirit
+Level: 26
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Spark
+- Karate Chop
+- Quick Attack
+- Electrify
 
 === TRAINER_ENGINEER_BRAXTON ===
 Name: BRAXTON
@@ -4546,20 +4904,68 @@ Class: Fisherman
 Pic: Fisherman
 Gender: Male
 Music: Hiker
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Tentacool
-Level: 17
+Gyarados @ Sharp Beak
+Ability: Intimidate
+Level: 25
+Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bounce
+- Whirlpool
+- Bite
+- Scary Face
 
-Staryu
-Level: 17
+Marshtomp @ Rindo Berry
+Ability: Mold Breaker
+Level: 24
+Relaxed Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Water Pulse
+- Protect
+- Mud Shot
+- Rock Throw
 
-Shellder
-Level: 17
+Slowpoke @ Lum Berry
+Ability: Regenerator
+Level: 24
+Quiet Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Zen Headbutt
+- Water Pulse
+- Disable
+- Yawn
+
+Wailmer @ Leftovers
+Ability: Water Veil
+Level: 26
+Sassy Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Noble Roar
+- Whirlpool
+- Haze
+- Soak
+
+Milotic @ Sitrus Berry
+Ability: Marvel Scale
+Level: 25
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Attract
+- Flip Turn
+- Water Pulse
+- Aurora Beam
+
+Kabuto @ Liechi Berry
+Ability: Weak Armor
+Level: 24
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Aqua Jet
+- Rock Throw
+- Fury Cutter
+- Mud Slap
 
 === TRAINER_FISHERMAN_NED ===
 Name: NED
@@ -7470,7 +7876,7 @@ Ability: Guts
 Level: 17
 Careful Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Bulldoze
+- Dig
 - Bite
 - Smack Down
 - Scary Face
@@ -9834,29 +10240,65 @@ Items: Super Potion / Full Heal
 Double Battle: No
 AI: Smart Trainer
 
-Voltorb
-Level: 21
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Sonic Boom
-- Tackle
-- Screech
+Jolteon @ Salac Berry
+Ability: Volt Absorb
+Level: 26
+Rash Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Baton Pass
 - Shock Wave
+- Swift
+- Charm
 
-Pikachu
-Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Quick Attack
-- Thunder Wave
-- Double Team
-- Shock Wave
+Delcatty @ Silk Scarf
+Ability: Normalize
+Level: 26
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Tidy Up
+- Draining Kiss
+- Attract
 
-Raichu
-Level: 24
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Electivire @ Black Belt
+Ability: Motor Drive
+Level: 27
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spark
+- Karate Chop
 - Quick Attack
+- Electrify
+
+Lanturn @ Air Balloon
+Ability: Water Absorb
+Level: 27
+Bold Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Aqua Ring
+- Confuse Ray
 - Thunder Wave
-- Double Team
+- Bubble Beam
+
+Manectric @ Charcoal
+Ability: Lightning Rod
+Level: 26
+Naive Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Incinerate
 - Shock Wave
+- Thunder Fang
+- Fire Fang
+
+Raichu @ Magnet
+Ability: Lightning Rod
+Level: 28
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Double Team
+- Agility
+- Surf
 
 === TRAINER_LEADER_ERIKA ===
 Name: ERIKA
@@ -10162,12 +10604,68 @@ Class: Gentleman
 Pic: Gentleman
 Gender: Male
 Music: Rich
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Pikachu
-Level: 23
+Clefable @ Sitrus Berry
+Ability: Magic Guard
+Level: 26
+Bold Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Shock Wave
+- Follow Me
+- Charm
+- Sing
+
+Persian @ Eject Button
+Ability: Technician
+Level: 25
+Naive Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Taunt
+- Shock Wave
+- Parting Shot
+- Fake Out
+
+Volbeat @ Lum Berry
+Ability: Prankster
+Level: 25
+Timid Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Tail Glow
+- Shock Wave
+- Moonlight
+- Confuse Ray
+
+Illumise @ White Herb
+Ability: Prankster
+Level: 25
+Hasty Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Tail Glow
+- Shock Wave
+- Struggle Bug
+- Charm
+
+Furret @ Sitrus Berry
+Ability: Friend Guard
+Level: 26
+Relaxed Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Shock Wave
+- Heal Pulse
+- Follow Me
+- Helping Hand
+
+Wigglytuff @ Throat Spray
+Ability: Punk Rock
+Level: 27
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Shock Wave
+- Metal Sound
+- Echoed Voice
+- Disable
 
 === TRAINER_GENTLEMAN_NORTON ===
 Name: NORTON
@@ -10208,21 +10706,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pidgeotto
-Level: 19
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Pidgeotto @ Sharp Beak
+Ability: Big Pecks
+Level: 25
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thundershock
+- Feather Dance
+- Air Cutter
+- Quick Attack
 
-Raticate
-Level: 16
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Raticate @ Focus Band
+Ability: Hustle
+Level: 25
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hone Claws
+- Hyper Fang
+- Endeavor
+- Quick Attack
 
-Kadabra
-Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Kadabra @ Twisted Spoon
+Ability: Magic Guard
+Level: 25
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psybeam
+- Reflect
+- Light Screen
+- Disable
 
-Wartortle
-Level: 20
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Rhyhorn @ Sitrus Berry
+Ability: Rock Head
+Level: 26
+Careful Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bulldoze
+- Take Down
+- Scary Face
+- Tail Whip
+
+Eevee @ Silk Scarf
+Ability: Adaptability
+Level: 26
+Docile Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Swift
+- Charm
+- Copycat
+- Quick Attack
+
+Wartortle @ Shell Bell
+Ability: Torrent
+Level: 27
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Aurora Beam
+- Protect
+- Water Pulse
+- Rapid Spin
 
 === TRAINER_RIVAL_SS_ANNE_BULBASAUR ===
 Name: TERRY
@@ -10233,21 +10775,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pidgeotto
-Level: 19
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Pidgeotto @ Sharp Beak
+Ability: Big Pecks
+Level: 25
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thundershock
+- Feather Dance
+- Air Cutter
+- Quick Attack
 
-Raticate
-Level: 16
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Raticate @ Focus Band
+Ability: Hustle
+Level: 25
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hone Claws
+- Hyper Fang
+- Endeavor
+- Quick Attack
 
-Kadabra
-Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Kadabra @ Twisted Spoon
+Ability: Magic Guard
+Level: 25
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psybeam
+- Reflect
+- Light Screen
+- Disable
 
-Ivysaur
-Level: 20
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Rhyhorn @ Sitrus Berry
+Ability: Rock Head
+Level: 26
+Careful Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bulldoze
+- Take Down
+- Scary Face
+- Tail Whip
+
+Eevee @ Silk Scarf
+Ability: Adaptability
+Level: 26
+Docile Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Swift
+- Charm
+- Copycat
+- Quick Attack
+
+Ivysaur @ Shell Bell
+Ability: Overgrow
+Level: 27
+Bashful Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sludge
+- Magical Leaf
+- Sleep Powder
+- Leech Seed
 
 === TRAINER_RIVAL_SS_ANNE_CHARMANDER ===
 Name: TERRY
@@ -10258,21 +10844,65 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pidgeotto
-Level: 19
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Pidgeotto @ Sharp Beak
+Ability: Big Pecks
+Level: 25
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thundershock
+- Feather Dance
+- Air Cutter
+- Quick Attack
 
-Raticate
-Level: 16
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Raticate @ Focus Band
+Ability: Hustle
+Level: 25
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hone Claws
+- Hyper Fang
+- Endeavor
+- Quick Attack
 
-Kadabra
-Level: 18
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Kadabra @ Twisted Spoon
+Ability: Magic Guard
+Level: 25
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psybeam
+- Reflect
+- Light Screen
+- Disable
 
-Charmeleon
-Level: 20
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Rhyhorn @ Sitrus Berry
+Ability: Rock Head
+Level: 26
+Careful Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bulldoze
+- Take Down
+- Scary Face
+- Tail Whip
+
+Eevee @ Silk Scarf
+Ability: Adaptability
+Level: 26
+Docile Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Swift
+- Charm
+- Copycat
+- Quick Attack
+
+Charmeleon @ Shell Bell
+Ability: Blaze
+Level: 27
+Hasty Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Rage
+- Flame Charge
+- Metal Claw
+- Slash
 
 === TRAINER_RIVAL_POKEMON_TOWER_SQUIRTLE ===
 Name: TERRY
@@ -11327,7 +11957,7 @@ Level: 22
 Rash Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Ancient Power
-- Bulldoze
+- Slam
 - Rollout
 - Flail
 
@@ -11619,13 +12249,65 @@ Music: Rich
 Double Battle: No
 AI: Smart Trainer
 
-Growlithe
-Level: 17
+Sandslash @ Sitrus Berry
+Ability: Battle Armor
+Level: 24
+Impish Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Slash
+- Dig
+- Rollout
+- Fury Cutter
 
-Ponyta
-Level: 17
+Rhyhorn @ Passho Berry
+Ability: Solid Rock
+Level: 25
+Careful Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Smack Down
+- Scary Face
+- Tail Whip
+
+Swinub @ Never Melt Ice
+Ability: Thick Fat
+Level: 24
+Brave Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Headbutt
+- Ice Shard
+- Ancient Power
+- Endure
+
+Nidoqueen @ Life Orb
+Ability: Sheer Force
+Level: 25
+Modest Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Mud Shot
+- Water Pulse
+- Shock Wave
+- Sludge Bomb
+
+Barboach @ Liechi Berry
+Ability: Oblivious
+Level: 24
+Relaxed Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Bulldoze
+- Water Pulse
+- Rest
+- Snore
+
+Dugtrio @ Focus Band
+Ability: Arena Trap
+Level: 26
+Adamant Nature
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Magnitude
+- Sucker Punch
+- Slash
+- Bulldoze
 
 === TRAINER_TWINS_ELI_ANNE ===
 Name: ELI & ANNE
