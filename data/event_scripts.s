@@ -950,8 +950,6 @@ Text_RestoredPkmnToFullHealth::
 Text_PokeVialText::
 	.string "Party POKéMON healed.$"
 
-	.include "data/text/surf.inc"
-
 @ Unused, from R/S
 Text_DoorOpenedFarAway::
 	.string "どこか　とおくの　とびらが\n"
@@ -1020,66 +1018,6 @@ Text_Gyaoo::
 Text_MoveCanOnlyBeLearnedOnce::
 	.string "This move can be learned only\n"
 	.string "once. Is that okay?$"
-
-EventScript_ResetAllMapFlags::
-	setflag FLAG_HIDE_OAK_IN_HIS_LAB
-	setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
-	setflag FLAG_HIDE_MOM_PALLET
-	setflag FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE
-	setflag FLAG_HIDE_PEWTER_CITY_HM05_HM06_AIDE
-	setflag FLAG_HIDE_POKEHOUSE_FUJI
-	setflag FLAG_HIDE_LIFT_KEY
-	setflag FLAG_HIDE_SILPH_SCOPE
-	setflag FLAG_HIDE_CERULEAN_RIVAL
-	setflag FLAG_HIDE_SS_ANNE_RIVAL
-	setflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE
-	setflag FLAG_HIDE_SAFFRON_CIVILIANS
-	setflag FLAG_HIDE_ROUTE_22_RIVAL
-	setflag FLAG_HIDE_OAK_IN_CHAMP_ROOM
-	setflag FLAG_HIDE_CREDITS_RIVAL
-	setflag FLAG_HIDE_CREDITS_OAK
-	setflag FLAG_HIDE_CINNABAR_BILL
-	setflag FLAG_HIDE_CINNABAR_SEAGALLOP
-	setflag FLAG_HIDE_CINNABAR_POKECENTER_BILL
-	setflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
-	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_BLACK_BELT
-	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_ROCKER
-	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_WOMAN
-	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_BEAUTY
-	setflag FLAG_HIDE_TWO_ISLAND_GAME_CORNER_LOSTELLE
-	setflag FLAG_HIDE_TWO_ISLAND_GAME_CORNER_BIKER
-	setflag FLAG_HIDE_TWO_ISLAND_WOMAN
-	setflag FLAG_HIDE_TWO_ISLAND_BEAUTY
-	setflag FLAG_HIDE_TWO_ISLAND_POKE_MANIAC
-	setflag FLAG_HIDE_LOSTELLE_IN_HER_HOME
-	setflag FLAG_HIDE_THREE_ISLAND_LONE_BIKER
-	setflag FLAG_HIDE_FOUR_ISLAND_RIVAL
-	setflag FLAG_HIDE_DOTTED_HOLE_SCIENTIST
-	setflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
-	setflag FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
-	setflag FLAG_HIDE_SELPHYS_BUTLER
-	setflag FLAG_HIDE_DEOXYS
-	setflag FLAG_HIDE_LORELEI_HOUSE_MEOWTH_DOLL
-	setflag FLAG_HIDE_LORELEI_HOUSE_CHANSEY_DOLL
-	setflag FLAG_HIDE_LORELEIS_HOUSE_NIDORAN_F_DOLL
-	setflag FLAG_HIDE_LORELEI_HOUSE_JIGGLYPUFF_DOLL
-	setflag FLAG_HIDE_LORELEIS_HOUSE_NIDORAN_M_DOLL
-	setflag FLAG_HIDE_LORELEIS_HOUSE_FEAROW_DOLL
-	setflag FLAG_HIDE_LORELEIS_HOUSE_PIDGEOT_DOLL
-	setflag FLAG_HIDE_LORELEIS_HOUSE_LAPRAS_DOLL
-	setflag FLAG_HIDE_POSTGAME_GOSSIPERS
-	setflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
-	setflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
-	setflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
-	setflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
-	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
-	end
-
-	.include "data/scripts/hall_of_fame.inc"
-	.include "data/scripts/pkmn_center_nurse.inc"
-	.include "data/scripts/obtain_item.inc"
-	.include "data/scripts/pc.inc"
-	.include "data/scripts/move_relearner.inc"
 
 Common_ShowEasyChatScreen::
 	fadescreen FADE_TO_BLACK
@@ -1228,47 +1166,11 @@ EventScript_NoMoreRoomForPokemon::
 	release
 	end
 
-	.include "data/text/braille.inc"
-	.include "data/scripts/trainers.inc"
-
 @ Test message!
 @ Welcome to the world of Pokémon!
 Text_TestMsg::
 	.string "テストよう　メッセージです！\n"
 	.string "ポケモンの　せかいへ　ようこそ！$"
-
-	.include "data/scripts/fame_checker.inc"
-	.include "data/text/fame_checker.inc"
-	.include "data/text/sign_lady.inc"
-	.include "data/text/trainer_card.inc"
-	.include "data/scripts/trainer_card.inc"
-	.include "data/text/help_system.inc"
-	.include "data/scripts/cable_club.inc"
-	.include "data/scripts/field_moves.inc"
-	.include "data/scripts/item_ball_scripts.inc"
-	.include "data/scripts/mystery_event_club.inc"
-	.include "data/scripts/day_care.inc"
-	.include "data/text/day_care.inc"
-	.include "data/scripts/flash.inc"
-	.include "data/scripts/repel.inc"
-	.include "data/scripts/safari_zone.inc"
-	.include "data/text/safari_zone.inc"
-	.include "data/text/competitive_brothers.inc"
-	.include "data/text/eon_ticket.inc"
-	.include "data/text/berries.inc"
-	.include "data/text/flavor_text.inc"
-	.include "data/scripts/hole.inc"
-	.include "data/text/trainers.inc"
-	.include "data/scripts/move_tutors.inc"
-	.include "data/scripts/trainer_tower.inc"
-	.include "data/scripts/test.inc"
-	.include "data/text/save.inc"
-	.include "data/text/new_game_intro.inc"
-	.include "data/text/pokedude.inc"
-	.include "data/scripts/follower.inc"
-	.include "data/scripts/dexnav.inc"
-	.include "data/text/apprentice.inc"
-	.include "data/text/tv.inc"
 
 	.include "data/maps/PalletRiver/scripts.inc"
 	.include "data/maps/PalletRiver/text.inc"
