@@ -780,7 +780,7 @@ static void Task_TopMenuHandleInput(u8 taskId)
                 task->func = Task_StartToCloseFameChecker;
             else if (sFameCheckerData->inPickMode)
             {
-                if (!IsTextPrinterActiveOnWindow(2) && HasUnlockedAllFlavorTextsForCurrentPerson() == TRUE)
+                if (!IsTextPrinterActiveOnWindow(FCWINDOWID_MSGBOX) && HasUnlockedAllFlavorTextsForCurrentPerson() == TRUE)
                     GetPickModeText();
             }
             else if (sFameCheckerData->personHasUnlockedPanels)
@@ -876,7 +876,7 @@ static void Task_FlavorTextDisplayHandleInput(u8 taskId)
     s16 *data = gTasks[taskId].data;
 
     RunTextPrinters();
-    if (JOY_NEW(A_BUTTON) && !IsTextPrinterActiveOnWindow(2))
+    if (JOY_NEW(A_BUTTON) && !IsTextPrinterActiveOnWindow(FCWINDOWID_MSGBOX))
     {
         u8 spriteId = sFameCheckerData->spriteIds[data[1]];
         if (gSprites[spriteId].data[1] != 0xFF)
@@ -897,6 +897,7 @@ static void Task_FlavorTextDisplayHandleInput(u8 taskId)
         FC_CreateScrollIndicatorArrowPair();
         MessageBoxPrintEmptyText();
         task->func = Task_TopMenuHandleInput;
+        DebugPrintfLevel(MGBA_LOG_ERROR, "b button");
     }
     else if (JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_DOWN))
     {
