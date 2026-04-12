@@ -5979,11 +5979,11 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
         {
             targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL, &canStopEvo, CHECK_EVO);
         }
-
+        //removed line of code to remove item from bag, since Rare Candies are eliminated from the game, and this is only used for the new Levelup item
         if (targetSpecies != SPECIES_NONE)
         {
             GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL, &canStopEvo, DO_EVO);
-            RemoveBagItem(gSpecialVar_ItemId, 1);
+            //RemoveBagItem(gSpecialVar_ItemId, 1);
             FreePartyPointers();
             gCB2_AfterEvolution = gPartyMenu.exitCallback;
             BeginEvolutionScene(mon, targetSpecies, canStopEvo, gPartyMenu.slotId);
@@ -6022,7 +6022,8 @@ static void ItemUseCB_RareCandyStep(u8 taskId, TaskFunc func)
     gPartyMenuUseExitCallback = TRUE;
     ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, gSpecialVar_ItemId, 0xFFFF);
     UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
-    RemoveBagItem(gSpecialVar_ItemId, 1);
+    //removed line of code to remove item from bag, since Rare Candies are eliminated from the game, and this is only used for the new Levelup item
+    //RemoveBagItem(gSpecialVar_ItemId, 1);
     GetMonNickname(mon, gStringVar1);
     if (sFinalLevel > sInitialLevel)
     {
