@@ -4754,7 +4754,10 @@ static void CB2_DoUseItemAnim(void)
             StartUseItemAnim_CantEvolve(gPartyMenu.slotId, gSpecialVar_ItemId, gPartyMenu.exitCallback);
     }
     else
-        StartUseItemAnim_Normal(gPartyMenu.slotId, gSpecialVar_ItemId, CB2_UseItem);
+    {
+        //StartUseItemAnim_Normal(gPartyMenu.slotId, gSpecialVar_ItemId, CB2_UseItem);
+        SetMainCallback2(CB2_UseItem);
+    }
 }
 
 static void CB2_UseItem(void)
