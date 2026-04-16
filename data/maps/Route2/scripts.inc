@@ -12,4 +12,5 @@ Route2_EventScript_DiglettsCaveSign::
 Route2_EventScript_Rick::
 	trainerbattle_single TRAINER_BUG_CATCHER_RICK, Route2_Text_RickIntro, Route2_Text_RickDefeat
 	msgbox Route2_Text_RickPostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_RT22_RIVAL
 	end
