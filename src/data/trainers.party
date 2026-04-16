@@ -661,19 +661,19 @@ Music: Male
 Double Battle: Yes
 AI: Smart Trainer
 
-Weedle
+Weedle @ Quick Claw
 Ability: Shield Dust
 Level: 6
 Adamant Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
-Caterpie
+Caterpie @ Quick Claw
 Ability: Shield Dust
 Level: 6
 Brave Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
-Wurmple
+Wurmple @ Quick Claw
 Ability: Shield Dust
 Level: 6
 Relaxed Nature
@@ -13137,7 +13137,7 @@ Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
 Music: Male
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
 Cascoon
