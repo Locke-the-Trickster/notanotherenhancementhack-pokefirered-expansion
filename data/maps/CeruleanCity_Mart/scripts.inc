@@ -15,7 +15,7 @@ CeruleanCity_Mart_EventScript_Clerk::
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart CeruleanCity_Mart_Items
+	pokemart SHOP_ID_CERULEAN_CITY_MART
 	msgbox Text_PleaseComeAgain
 	release
 	end

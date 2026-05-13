@@ -1,4 +1,5 @@
 #include "global.h"
+#include "battle_main.h"
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"
@@ -16,6 +17,7 @@
 #include "palette.h"
 #include "party_menu.h"
 #include "pokemon_storage_system.h"
+#include "pokemon_summary_screen.h"
 #include "scanline_effect.h"
 #include "shop.h"
 #include "sound.h"
@@ -25,6 +27,7 @@
 #include "teachy_tv.h"
 #include "text_window.h"
 #include "tm_case.h"
+#include "type_icon_sprite.h"
 #include "constants/items.h"
 #include "constants/quest_log.h"
 #include "constants/songs.h"
@@ -101,10 +104,10 @@ static EWRAM_DATA struct {
     u8 contextMenuWindowId;
     u8 scrollArrowsTaskId;
     u16 currItem;
-    const u8 * menuActionIndices;
+    const u8 *menuActionIndices;
     u8 numMenuActions;
     s16 seqId;
-    u8 unused[8];
+    u8 typeIconSpriteId;
 } * sTMCaseDynamicResources = NULL;
 
 // Save the player's bag state when the Pokedude's bag is being shown
@@ -121,7 +124,7 @@ extern const u8 gPokedudeText_ReadTMDescription[];
 static const u8 sText_TMCaseWillBePutAway[] = _("The TM CASE will be\nput away.");
 
 static EWRAM_DATA void *sTilemapBuffer = NULL;
-static EWRAM_DATA struct ListMenuItem * sListMenuItemsBuffer = NULL;
+static EWRAM_DATA struct ListMenuItem *sListMenuItemsBuffer = NULL;
 static EWRAM_DATA u8 (* sListMenuStringsBuffer)[29] = NULL;
 
 static void CB2_SetUpTMCaseUI_Blocking(void);
@@ -167,23 +170,27 @@ static void Task_AfterSale_ReturnToList(u8 taskId);
 static void Task_Pokedude_Start(u8 taskId);
 static void Task_Pokedude_Run(u8 taskId);
 static void InitWindowTemplatesAndPals(void);
-static void TMCase_Print(u8 windowId, u8 fontId, const u8 * str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx);
+static void TMCase_Print(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx);
 static void TMCase_SetWindowBorder1(u8 windowId);
 static void TMCase_SetWindowBorder2(u8 windowId);
-static void PrintMessageWithFollowupTask(u8 taskId, u8 fontId, const u8 * str, TaskFunc func);
+static void PrintMessageWithFollowupTask(u8 taskId, u8 fontId, const u8 *str, TaskFunc func);
 static void PrintTitle(void);
 static void DrawMoveInfoLabels(void);
 static void PlaceHMTileInWindow(u8 windowId, u8 x, u8 y);
 static void PrintPlayersMoney(void);
-static void HandleCreateYesNoMenu(u8 taskId, const struct YesNoFuncTable * ptrs);
-static u8 AddContextMenu(u8 * windowId, u8 windowIndex);
-static void RemoveContextMenu(u8 * windowId);
+static void HandleCreateYesNoMenu(u8 taskId, const struct YesNoFuncTable *ptrs);
+static u8 AddContextMenu(u8 *windowId, u8 windowIndex);
+static void RemoveContextMenu(u8 *windowId);
 static u8 CreateDiscSprite(enum Item itemId);
 static void SetDiscSpriteAnim(struct Sprite *sprite, u8 tmIdx);
-static void TintDiscpriteByType(u8 type);
+static void TintDiscpriteByType(enum Type type);
 static void SetDiscSpritePosition(struct Sprite *sprite, u8 tmIdx);
 static void SwapDisc(u8 spriteId, enum Item itemId);
 static void SpriteCB_SwapDisc(struct Sprite *sprite);
+static void TMCase_CreateTypeIconSprite(void);
+static void UpdateTypeIconSprite(enum Type type);
+static void HideTypeIcon(void);
+static void DestroyTypeIconSprites(void);
 
 static const struct BgTemplate sBGTemplates[] = {
     {
@@ -392,9 +399,6 @@ static const struct SpriteTemplate sSpriteTemplate_Disc = {
     .paletteTag = TAG_DISC,
     .oam = &sTMSpriteOamData,
     .anims = sAnims_Disc,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCallbackDummy
 };
 
 static const u16 sTMSpritePaletteOffsetByType[NUMBER_OF_MON_TYPES] = {
@@ -425,6 +429,7 @@ void InitTMCase(u8 type, void (* exitCallback)(void), bool8 allowSelectClose)
     sTMCaseDynamicResources->nextScreenCallback = NULL;
     sTMCaseDynamicResources->scrollArrowsTaskId = TASK_NONE;
     sTMCaseDynamicResources->contextMenuWindowId = WINDOW_NONE;
+    sTMCaseDynamicResources->typeIconSpriteId = 0xFF;
     if (type != TMCASE_REOPENING)
         sTMCaseStaticResources.menuType = type;
     if (exitCallback != NULL)
@@ -618,9 +623,11 @@ static bool8 HandleLoadTMCaseGraphicsAndPalettes(void)
         break;
     case 2:
         DecompressDataWithHeaderWram(gTMCase_Tilemap, GetBgTilemapBuffer(1));
+        TMCase_CreateTypeIconSprite();
         sTMCaseDynamicResources->seqId++;
         break;
     case 3:
+        AllocSpritePalette(TAG_DISC);
         if (gSaveBlock2Ptr->playerGender == MALE)
             LoadPalette(gTMCaseMenu_Male_Pal, BG_PLTT_ID(0), 4 * PLTT_SIZE_4BPP);
         else
@@ -641,14 +648,14 @@ static bool8 HandleLoadTMCaseGraphicsAndPalettes(void)
 
 static void CreateTMCaseListMenuBuffers(void)
 {
-    struct BagPocket * pocket = &gBagPockets[POCKET_TM_HM];
+    struct BagPocket *pocket = &gBagPockets[POCKET_TM_HM];
     sListMenuItemsBuffer = Alloc((pocket->capacity + 1) * sizeof(struct ListMenuItem));
     sListMenuStringsBuffer = Alloc(sTMCaseDynamicResources->numTMs * 29);
 }
 
 static void InitTMCaseListMenuItems(void)
 {
-    struct BagPocket * pocket = &gBagPockets[POCKET_TM_HM];
+    struct BagPocket *pocket = &gBagPockets[POCKET_TM_HM];
     u16 i;
 
     for (i = 0; i < sTMCaseDynamicResources->numTMs; i++)
@@ -747,7 +754,7 @@ static void List_ItemPrintFunc(u8 windowId, u32 itemIndex, u8 y)
 
 static void PrintDescription(s32 itemIndex)
 {
-    const u8 * str;
+    const u8 *str;
 
     if (itemIndex != LIST_CANCEL)
         str = GetItemDescription(GetBagItemId(POCKET_TM_HM, itemIndex));
@@ -886,7 +893,7 @@ static void Task_BeginFadeOutFromTMCase(u8 taskId)
 
 static void Task_FadeOutAndCloseTMCase(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     if (!gPaletteFade.active)
     {
@@ -896,6 +903,7 @@ static void Task_FadeOutAndCloseTMCase(u8 taskId)
         else
             SetMainCallback2(sTMCaseStaticResources.exitCallback);
         RemoveScrollArrows();
+        DestroyTypeIconSprites();
         DestroyTMCaseBuffers();
         DestroyTask(taskId);
     }
@@ -903,7 +911,7 @@ static void Task_FadeOutAndCloseTMCase(u8 taskId)
 
 static void Task_HandleListInput(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
     s32 input;
 
     if (!gPaletteFade.active)
@@ -956,7 +964,7 @@ static void ReturnToList(u8 taskId)
 // menu with a list of actions that can be taken.
 static void Task_SelectedTMHM_Field(u8 taskId)
 {
-    u8 * strbuf;
+    u8 *strbuf;
 
     // Create context window
     TMCase_SetWindowBorder2(WIN_SELECTED_MSG);
@@ -1104,7 +1112,7 @@ static void Task_WaitButtonAfterErrorPrint(u8 taskId)
 
 static void CloseMessageAndReturnToList(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     DestroyListMenuTask(tListTaskId, &sTMCaseStaticResources.scrollOffset, &sTMCaseStaticResources.selectedRow);
     tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, sTMCaseStaticResources.scrollOffset, sTMCaseStaticResources.selectedRow);
@@ -1121,7 +1129,7 @@ static void CloseMessageAndReturnToList(u8 taskId)
 
 static void Action_Exit(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     RemoveContextMenu(&sTMCaseDynamicResources->contextMenuWindowId);
     ClearStdWindowAndFrameToTransparent(WIN_SELECTED_MSG, FALSE);
@@ -1138,7 +1146,7 @@ static void Action_Exit(u8 taskId)
 
 static void Task_SelectedTMHM_GiveParty(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     if (!GetItemImportance(GetBagItemId(POCKET_TM_HM, tListPos)))
     {
@@ -1154,7 +1162,7 @@ static void Task_SelectedTMHM_GiveParty(u8 taskId)
 
 static void Task_SelectedTMHM_GivePC(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     if (!GetItemImportance(GetBagItemId(POCKET_TM_HM, tListPos)))
     {
@@ -1206,7 +1214,7 @@ static void Task_SelectedTMHM_Sell(u8 taskId)
 
 static void Task_AskConfirmSaleWithAmount(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     ConvertIntToDecimalStringN(gStringVar3, GetItemSellPrice(gSpecialVar_ItemId) * tItemCount, STR_CONV_MODE_LEFT_ALIGN, 6);
     StringExpandPlaceholders(gStringVar4, gText_ICanPayThisMuch_WouldThatBeOkay);
@@ -1220,7 +1228,7 @@ static void Task_PlaceYesNoBox(u8 taskId)
 
 static void Task_SaleOfTMsCanceled(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     ClearStdWindowAndFrameToTransparent(WIN_MONEY, FALSE);
     ClearDialogWindowAndFrameToTransparent(WIN_MESSAGE, FALSE);
@@ -1296,7 +1304,7 @@ static void Task_QuantitySelect_HandleInput(u8 taskId)
 
 static void Task_PrintSaleConfirmedText(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     PutWindowTilemap(WIN_LIST);
     ScheduleBgCopyTilemapToVram(0);
@@ -1308,7 +1316,7 @@ static void Task_PrintSaleConfirmedText(u8 taskId)
 
 static void Task_DoSaleOfTMs(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     PlaySE(SE_SHOP);
     RemoveBagItem(gSpecialVar_ItemId, tItemCount);
@@ -1358,7 +1366,7 @@ void Pokedude_InitTMCase(void)
 
 static void Task_Pokedude_Start(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     if (!gPaletteFade.active)
     {
@@ -1372,7 +1380,7 @@ static void Task_Pokedude_Start(u8 taskId)
 
 static void Task_Pokedude_Run(u8 taskId)
 {
-    s16 * data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     if (JOY_NEW(B_BUTTON))
     {
@@ -1489,6 +1497,7 @@ static void Task_Pokedude_Run(u8 taskId)
         {
             SetMainCallback2(sTMCaseStaticResources.exitCallback);
             RemoveScrollArrows();
+            DestroyTypeIconSprites();
             DestroyTMCaseBuffers();
             DestroyTask(taskId);
         }
@@ -1520,7 +1529,7 @@ static void InitWindowTemplatesAndPals(void)
     ScheduleBgCopyTilemapToVram(0);
 }
 
-static void TMCase_Print(u8 windowId, u8 fontId, const u8 * str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx)
+static void TMCase_Print(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx)
 {
     AddTextPrinterParameterized4(windowId, fontId, x, y, letterSpacing, lineSpacing, sTextColors[colorIdx], speed, str);
 }
@@ -1535,7 +1544,7 @@ static void TMCase_SetWindowBorder2(u8 windowId)
     DrawStdFrameWithCustomTileAndPalette(windowId, FALSE, 0x78, 13);
 }
 
-static void PrintMessageWithFollowupTask(u8 taskId, u8 fontId, const u8 * str, TaskFunc func)
+static void PrintMessageWithFollowupTask(u8 taskId, u8 fontId, const u8 *str, TaskFunc func)
 {
     DisplayMessageAndContinueTask(taskId, WIN_MESSAGE, 0x64, 0x0B, fontId, GetPlayerTextSpeedDelay(), str, func);
     ScheduleBgCopyTilemapToVram(1);
@@ -1565,13 +1574,19 @@ static void PrintMoveInfo(enum Item itemId)
         for (u32 i = 0; i < 4; i++)
             TMCase_Print(WIN_MOVE_INFO, FONT_NORMAL_COPY_2, gText_ThreeHyphens, 7, 12 * i, 0, 0, TEXT_SKIP_DRAW, COLOR_MOVE_INFO);
         CopyWindowToVram(WIN_MOVE_INFO, COPYWIN_GFX);
+        HideTypeIcon();
     }
     else
     {
         const u8 *str;
         enum Move move = ItemIdToBattleMoveId(itemId);
+        enum Type type = gMovesInfo[move].type;
+
         // Draw type icon
-        BlitMenuInfoIcon(WIN_MOVE_INFO, gMovesInfo[move].type + 1, 0, 0);
+        if (P_USE_TYPE_ICON_SPRITES)
+            UpdateTypeIconSprite(type);
+        else
+            BlitMenuTypeIcon(WIN_MOVE_INFO, type, 0, 0);
 
         // Print power
         if (gMovesInfo[move].power < 2)
@@ -1616,7 +1631,7 @@ static void HandleCreateYesNoMenu(u8 taskId, const struct YesNoFuncTable *ptrs)
     CreateYesNoMenuWithCallbacks(taskId, &sYesNoWindowTemplate, FONT_NORMAL, 0, 2, 91, 14, ptrs);
 }
 
-static u8 AddContextMenu(u8 * windowId, u8 windowIndex)
+static u8 AddContextMenu(u8 *windowId, u8 windowIndex)
 {
     if (*windowId == WINDOW_NONE)
     {
@@ -1627,7 +1642,7 @@ static u8 AddContextMenu(u8 * windowId, u8 windowIndex)
     return *windowId;
 }
 
-static void RemoveContextMenu(u8 * windowId)
+static void RemoveContextMenu(u8 *windowId)
 {
     ClearStdWindowAndFrameToTransparent(*windowId, FALSE);
     ClearWindowTilemap(*windowId);
@@ -1640,6 +1655,7 @@ static u8 CreateDiscSprite(enum Item itemId)
 {
     u8 spriteId = CreateSprite(&sSpriteTemplate_Disc, DISC_BASE_X, DISC_BASE_Y, 0);
     u8 tmIdx;
+
     if (itemId == ITEM_NONE)
     {
         SetDiscSpritePosition(&gSprites[spriteId], DISC_HIDDEN);
@@ -1665,7 +1681,7 @@ static void SetDiscSpriteAnim(struct Sprite *sprite, u8 tmIdx)
 
 #define NUM_TYPES_PER_PALETTE 16
 
-static void TintDiscpriteByType(u8 type)
+static void TintDiscpriteByType(enum Type type)
 {
     u8 palOffset = PLTT_ID(IndexOfSpritePaletteTag(TAG_DISC));
     u32 palTypeIndex = sTMSpritePaletteOffsetByType[type] / (NUM_TYPES_PER_PALETTE * PLTT_SIZE_4BPP);
@@ -1741,4 +1757,53 @@ static void SpriteCB_SwapDisc(struct Sprite *sprite)
         else
             sprite->y2 -= DISC_Y_MOVE;
     }
+}
+
+static void TMCase_CreateTypeIconSprite(void)
+{
+    if (!P_USE_TYPE_ICON_SPRITES)
+        return;
+
+    InitTypeIconGfx();
+    sTMCaseDynamicResources->typeIconSpriteId = CreateTypeIconSprite();
+}
+
+static void ShowMonTypeIcon(enum Type type, s32 x, s32 y)
+{
+    struct Sprite *icon = &gSprites[sTMCaseDynamicResources->typeIconSpriteId];
+
+    icon->invisible = FALSE;
+    icon->oam.paletteNum = IndexOfSpritePaletteTag(gTypesInfo[type].paletteTag);
+    icon->x = x;
+    icon->y = y;
+    StartSpriteAnim(icon, type);
+}
+
+static void UpdateTypeIconSprite(enum Type type)
+{
+    if (!P_USE_TYPE_ICON_SPRITES)
+        return;
+
+    ShowMonTypeIcon(type, 72, 110);
+}
+
+static void HideTypeIcon(void)
+{
+    gSprites[sTMCaseDynamicResources->typeIconSpriteId].invisible = TRUE;
+}
+
+static void DestroyTypeIconSprites(void)
+{
+    if (!P_USE_TYPE_ICON_SPRITES)
+        return;
+
+    if (sTMCaseDynamicResources->typeIconSpriteId != 0xFF)
+    {
+        DestroySprite(&gSprites[sTMCaseDynamicResources->typeIconSpriteId]);
+        sTMCaseDynamicResources->typeIconSpriteId = 0xFF;
+    }
+
+    FreeSpritePaletteByTag(TAG_MOVE_TYPES_1);
+    FreeSpritePaletteByTag(TAG_MOVE_TYPES_2);
+    FreeSpritePaletteByTag(TAG_MOVE_TYPES_3);
 }

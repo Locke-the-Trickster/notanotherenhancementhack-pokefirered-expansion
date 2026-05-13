@@ -4,7 +4,7 @@
 #include "field_player_avatar.h"
 #include "metatile_behavior.h"
 
-void QL_RecordObjects(struct QuestLogScene * questLog)
+void QL_RecordObjects(struct QuestLogScene *questLog)
 {
     u32 i;
 
@@ -45,10 +45,10 @@ void QL_RecordObjects(struct QuestLogScene * questLog)
     }
 }
 
-void QL_LoadObjects(const struct QuestLogScene * questLog, const struct ObjectEventTemplate * templates)
+void QL_LoadObjects(const struct QuestLogScene *questLog, const struct ObjectEventTemplate *templates)
 {
     u32 i, j;
-    const struct QuestLogObjectEvent * questLogObjectEvents = questLog->objectEvents;
+    const struct QuestLogObjectEvent *questLogObjectEvents = questLog->objectEvents;
 
     CpuFill16(0, gObjectEvents, sizeof(gObjectEvents));
 
@@ -136,10 +136,10 @@ void QL_TryStopSurfing(void)
         s16 x, y;
 
         PlayerGetDestCoords(&x, &y);
-        if (!MetatileBehavior_IsSurfable(MapGridGetMetatileBehaviorAt(x, y)) && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+        if (!MetatileBehavior_IsSurfable(MapGridGetMetatileBehaviorAt(x, y)) && TestPlayerAvatarState(PLAYER_AVATAR_STATE_SURFING))
         {
-            struct ObjectEvent * objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
+            struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+            SetPlayerAvatarTransitionState(PLAYER_AVATAR_STATE_NORMAL);
             DestroySprite(&gSprites[objectEvent->fieldEffectSpriteId]);
         }
     }

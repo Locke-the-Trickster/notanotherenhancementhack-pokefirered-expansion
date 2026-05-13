@@ -1,4 +1,5 @@
 #include "global.h"
+#include "battle_main.h"
 #include "decompress.h"
 #include "dma3.h"
 #include "event_data.h"
@@ -27,7 +28,7 @@
 #define STD_WINDOW_PALETTE_SIZE PLTT_SIZEOF(10)
 #define STD_WINDOW_BASE_TILE_NUM 0x214
 
-struct MenuInfoIcon
+struct MenuInfoIconData
 {
     u8 width;
     u8 height;
@@ -115,33 +116,14 @@ static const struct WindowTemplate sYesNo_WindowTemplate =
 
 static const u8 sTopBarWindowTextColors[3] = {TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
 
-static const struct MenuInfoIcon sMenuInfoIcons[] =
+static const struct MenuInfoIconData sMenuInfoIcons[] =
 {   // { width, height, offset }
-    [MENU_INFO_ICON_CAUGHT] = { 12, 12, 0x00 },
-    [TYPE_NORMAL + 1]   = { 32, 12, 0x20 },
-    [TYPE_FIGHTING + 1] = { 32, 12, 0x64 },
-    [TYPE_FLYING + 1]   = { 32, 12, 0x60 },
-    [TYPE_POISON + 1]   = { 32, 12, 0x80 },
-    [TYPE_GROUND + 1]   = { 32, 12, 0x48 },
-    [TYPE_ROCK + 1]     = { 32, 12, 0x44 },
-    [TYPE_BUG + 1]      = { 32, 12, 0x6C },
-    [TYPE_GHOST + 1]    = { 32, 12, 0x68 },
-    [TYPE_STEEL + 1]    = { 32, 12, 0x88 },
-    [TYPE_MYSTERY + 1]  = { 32, 12, 0xA4 },
-    [TYPE_FIRE + 1]     = { 32, 12, 0x24 },
-    [TYPE_WATER + 1]    = { 32, 12, 0x28 },
-    [TYPE_GRASS + 1]    = { 32, 12, 0x2C },
-    [TYPE_ELECTRIC + 1] = { 32, 12, 0x40 },
-    [TYPE_PSYCHIC + 1]  = { 32, 12, 0x84 },
-    [TYPE_ICE + 1]      = { 32, 12, 0x4C },
-    [TYPE_DRAGON + 1]   = { 32, 12, 0xA0 },
-    [TYPE_DARK + 1]     = { 32, 12, 0x8C },
-    [TYPE_FAIRY + 1]    = { 32, 12, 0x0C },
-    [MENU_INFO_ICON_TYPE]      = { 40, 12, 0xA8 },
-    [MENU_INFO_ICON_POWER]     = { 40, 12, 0xC0 },
-    [MENU_INFO_ICON_ACCURACY]  = { 40, 12, 0xC8 },
-    [MENU_INFO_ICON_PP]        = { 40, 12, 0xE0 },
-    [MENU_INFO_ICON_EFFECT]    = { 40, 12, 0xE8 },
+    [MENU_INFO_ICON_CAUGHT]   = { 12, 12, 0x00 },
+    [MENU_INFO_ICON_TYPE]     = { 40, 12, 0xA8 },
+    [MENU_INFO_ICON_POWER]    = { 40, 12, 0xC0 },
+    [MENU_INFO_ICON_ACCURACY] = { 40, 12, 0xC8 },
+    [MENU_INFO_ICON_PP]       = { 40, 12, 0xE0 },
+    [MENU_INFO_ICON_EFFECT]   = { 40, 12, 0xE8 },
 };
 
 void InitStandardTextBoxWindows(void)
@@ -1159,7 +1141,7 @@ void *DecompressAndCopyTileDataToVram(u8 bgId, const void *src, u32 size, u16 of
 
     if (sTempTileDataBufferCursor < ARRAY_COUNT(sTempTileDataBuffers))
     {
-        void *ptr = malloc_and_decompress(src, &sizeOut);
+        void *ptr = AllocAndDecompress(src, &sizeOut);
         if (!size)
             size = sizeOut;
         if (ptr)
@@ -1176,7 +1158,7 @@ void DecompressAndLoadBgGfxUsingHeap(u8 bgId, const void *src, u32 size, u16 off
 {
     u32 sizeOut;
 
-    void *ptr = malloc_and_decompress(src, &sizeOut);
+    void *ptr = AllocAndDecompress(src, &sizeOut);
     if (!size)
         size = sizeOut;
     if (ptr)
@@ -1191,7 +1173,7 @@ void DecompressAndLoadBgGfxUsingHeap2(u8 bgId, const void *src, u32 size, u16 of
 {
     u32 sizeOut;
 
-    void *ptr = malloc_and_decompress(src, &sizeOut);
+    void *ptr = AllocAndDecompress(src, &sizeOut);
     if (sizeOut > size)
         sizeOut = size;
     if (ptr)
@@ -1211,7 +1193,7 @@ static void TaskFreeBufAfterCopyingTileDataToVram(u8 taskId)
     }
 }
 
-void *malloc_and_decompress(const void *src, u32 *size)
+void *AllocAndDecompress(const void *src, u32 *size)
 {
     void *ptr;
     u32 localSize = GetDecompressedDataSize(src);
@@ -1476,7 +1458,7 @@ u16 GetStandardFrameBaseTileNum(void)
     return STD_WINDOW_BASE_TILE_NUM;
 }
 
-void AddTextPrinterParameterized3(u8 windowId, u8 fontId, u8 x, u8 y, const u8 * color, s8 speed, const u8 * str)
+void AddTextPrinterParameterized3(u8 windowId, u8 fontId, u8 x, u8 y, const u8 *color, s8 speed, const u8 *str)
 {
     struct TextPrinterTemplate printer;
 
@@ -1541,7 +1523,7 @@ void AddTextPrinterParameterized5(u8 windowId, u8 fontId, const u8 *str, u8 x, u
     AddTextPrinter(&printer, speed, callback);
 }
 
-void PrintPlayerNameOnWindow(u8 windowId, const u8 * src, u16 x, u16 y)
+void PrintPlayerNameOnWindow(u8 windowId, const u8 *src, u16 x, u16 y)
 {
     s32 i;
 
@@ -1586,9 +1568,14 @@ void ListMenuLoadStdPalAt(u8 palOffset, u8 palId)
     LoadPalette(palette, palOffset, PLTT_SIZE_4BPP);
 }
 
-void BlitMenuInfoIcon(u8 windowId, u8 iconId, u16 x, u16 y)
+void BlitMenuInfoIcon(u8 windowId, enum MenuInfoIcon iconId, u16 x, u16 y)
 {
     BlitBitmapRectToWindow(windowId, &gMenuInfoElements_Gfx[sMenuInfoIcons[iconId].offset * TILE_SIZE_4BPP], 0, 0, 128, 128, x, y, sMenuInfoIcons[iconId].width, sMenuInfoIcons[iconId].height);
+}
+
+void BlitMenuTypeIcon(u8 windowId, enum Type type, u16 x, u16 y)
+{
+    BlitBitmapRectToWindow(windowId, &gMenuInfoElements_Gfx[gTypesInfo[type].menuIconOffset * TILE_SIZE_4BPP], 0, 0, 128, 128, x, y, MENU_INFO_TYPE_ICON_WIDTH, MENU_INFO_TYPE_ICON_HEIGHT);
 }
 
 void BufferSaveMenuText(enum SaveStat gameStatId, u8 *dest0, u8 color)
@@ -1634,7 +1621,7 @@ void BufferSaveMenuText(enum SaveStat gameStatId, u8 *dest0, u8 color)
     }
 }
 
-void DrawHelpMessageWindowWithText(const u8 * text)
+void DrawHelpMessageWindowWithText(const u8 *text)
 {
     LoadHelpMessageWindowGfx(CreateHelpMessageWindow(), DLG_WINDOW_BASE_TILE_NUM, BG_PLTT_ID(DLG_WINDOW_PALETTE_NUM));
     PrintTextOnHelpMessageWindow(text, COPYWIN_GFX);

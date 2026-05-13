@@ -830,7 +830,7 @@ static bool8 AllocPartyMenuBgGfx(void)
     switch (sPartyMenuInternal->data[0])
     {
     case 0:
-        sPartyBgGfxTilemap = malloc_and_decompress(gPartyMenuBg_Gfx, &sizeout);
+        sPartyBgGfxTilemap = AllocAndDecompress(gPartyMenuBg_Gfx, &sizeout);
         LoadBgTiles(1, sPartyBgGfxTilemap, sizeout, 0);
         ++sPartyMenuInternal->data[0];
         break;
@@ -3675,7 +3675,7 @@ static void SwitchPartyMon(void)
 
 static void SetSwitchedPartyOrderQuestLogEvent(void)
 {
-    struct QuestLogEvent_SwitchedPartyOrder * data = Alloc(sizeof(*data));
+    struct QuestLogEvent_SwitchedPartyOrder *data = Alloc(sizeof(*data));
 
     data->species1 = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES_OR_EGG);
     data->species2 = GetMonData(&gPlayerParty[gPartyMenu.slotId2], MON_DATA_SPECIES_OR_EGG);
@@ -4505,7 +4505,7 @@ bool32 FieldMove_SetUpSurf(void)
 
     GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
     if (MetatileBehavior_IsFastWater(MapGridGetMetatileBehaviorAt(x, y)) != TRUE
-     && !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING)
+     && !TestPlayerAvatarState(PLAYER_AVATAR_STATE_SURFING)
      && IsPlayerFacingSurfableFishableWater() == TRUE)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
@@ -4519,7 +4519,7 @@ static void DisplayCantUseSurfMessage(void)
 {
     s16 x, y;
 
-    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+    if (TestPlayerAvatarState(PLAYER_AVATAR_STATE_SURFING))
     {
         DisplayPartyMenuStdMessage(PARTY_MSG_ALREADY_SURFING);
     }
@@ -4679,7 +4679,7 @@ void CB2_ShowPartyMenuForItemUse(void)
     if (GetItemEffectType(gSpecialVar_ItemId) == ITEM_EFFECT_SACRED_ASH)
     {
         gPartyMenu.slotId = 0;
-        for (i = 0; i < PARTY_SIZE; ++i)
+        for (i = 0; i < PARTY_SIZE; i++)
         {
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && GetMonData(&gPlayerParty[i], MON_DATA_HP) == 0)
             {
@@ -4717,6 +4717,7 @@ void CB2_ShowPartyMenuForItemUse(void)
         }
         task = Task_HandleChooseMonInput;
     }
+
     InitPartyMenu(menuType, partyLayout, PARTY_ACTION_USE_ITEM, TRUE, msgId, task, callback);
 }
 
@@ -6495,9 +6496,6 @@ static void TryTutorSelectedMon(u8 taskId)
     }
 }
 
-#undef learnMoveId
-#undef learnMoveMethod
-
 void CB2_PartyMenuFromStartMenu(void)
 {
     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ReturnToFieldWithOpenMenu);
@@ -7486,8 +7484,8 @@ void FormChangeTeachMove(u8 taskId, u32 move, u32 slot)
 {
     struct Pokemon *mon;
 
-    gPartyMenu.data[0] = move;
-    gPartyMenu.data[1] = 0;
+    gPartyMenu.learnMoveId = move;
+    gPartyMenu.learnMoveMethod = LEARN_VIA_TUTOR;
 
     PlaySE(SE_SELECT);
     mon = &gPlayerParty[slot];
@@ -7504,6 +7502,9 @@ void FormChangeTeachMove(u8 taskId, u32 move, u32 slot)
         gTasks[taskId].func = Task_ReplaceMoveYesNo;
     }
 }
+
+#undef learnMoveId
+#undef learnMoveMethod
 
 void DeleteMove(struct Pokemon *mon, u32 move)
 {

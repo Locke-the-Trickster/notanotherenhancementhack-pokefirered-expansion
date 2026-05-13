@@ -4651,8 +4651,6 @@ extern const u16 gFogPalette[];
 extern const u32 gPartyMenuPokeball_Gfx[];
 extern const u16 gPartyMenuPokeball_Pal[];
 extern const u32 gPartyMenuPokeballSmall_Gfx[];
-extern const u32 gMoveTypes_Gfx[];
-extern const u16 gMoveTypes_Pal[];
 extern const u32 gStatusGfx_Icons[];
 extern const u16 gStatusPal_Icons[];
 extern const u32 gPartyMenuBg_Gfx[];
@@ -6343,5 +6341,7 @@ extern const u16 gFrontierPassCursor_Pal[];
 extern const u16 gFrontierPassMedalsGold_Pal[];
 extern const u16 gFrontierPassMedalsSilver_Pal[];
 extern const u16 gFrontierPassMapCursor_Pal[];
+
+extern const u8 gBerryTreeObjectEventGraphicsIdTable[];
 
 #endif //GUARD_GRAPHICS_H

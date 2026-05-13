@@ -15,7 +15,7 @@ PewterCity_Mart_EventScript_Clerk::
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart PewterCity_Mart_Items
+	pokemart SHOP_ID_PEWTER_CITY_MART
 	msgbox Text_PleaseComeAgain
 	release
 	end
