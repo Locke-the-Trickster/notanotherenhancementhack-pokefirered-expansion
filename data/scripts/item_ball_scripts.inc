@@ -11,6 +11,10 @@ Route2_EventScript_ItemMetronome::
 	finditem ITEM_METRONOME
 	end
 
+PalletRiver_EventScript_ItemQuickClaw::
+	finditem ITEM_QUICK_CLAW
+	end
+
 ViridianForest_EventScript_ItemNetBall::
 	finditem ITEM_NET_BALL
 	end
@@ -507,8 +511,8 @@ PokemonMansion_2F_EventScript_ItemHPUp::
 	finditem ITEM_HP_UP
 	end
 
-ViridianCity_EventScript_ItemQuickPowder::
-	finditem ITEM_QUICK_POWDER
+ViridianCity_EventScript_ItemFocusBand::
+	finditem ITEM_FOCUS_BAND
 	end
 
 Route11_EventScript_ItemGreatBall::

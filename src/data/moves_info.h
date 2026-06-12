@@ -265,7 +265,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Throws coins at\nthe foe. "
             "Money is\nrecovered after."),
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = 60,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
@@ -615,8 +615,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Fly"),
         .description = COMPOUND_STRING(
-            "Flies up on the\nfirst turn, "
-            "then\nstrikes the next\nturn."),
+            "Flies up,\nthen strikes."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 90 : 70,
         .type = TYPE_FLYING,
@@ -1163,7 +1162,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "A toxic attack\nwith barbs, "
             "etc.,\nthat may poison."),
         .effect = EFFECT_HIT,
-        .power = 30,
+        .power = 35,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 35,
@@ -1188,7 +1187,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Foreleg stingers\njab foe "
             "twice. May\npoison."),
         .effect = EFFECT_HIT,
-        .power = 25,
+        .power = 30,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 20,
@@ -2299,7 +2298,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Traps the foe in a\nring of "
             "fire for\n"BINDING_TURNS" turns."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 35 : 15,
+        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 45 : 15,
         .type = TYPE_FIRE,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 100,
         .pp = 15,
@@ -2379,8 +2378,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_NON_VOLATILE_STATUS,
         .power = 0,
         .type = TYPE_ELECTRIC,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_7 ? 90 : 100,
-        .pp = 10,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_7 ? 100 : 100,
+        .pp = 3,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -2498,8 +2497,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Dig"),
         .description = COMPOUND_STRING(
-            "Digs underground\nthe first "
-            "turn and\nstrikes next turn."),
+            "Digs underground,\n"
+            "then strikes."),
         .effect = EFFECT_HIT,
         #if B_UPDATED_MOVE_DATA >= GEN_4
             .power = 60,
@@ -3740,7 +3739,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_NON_VOLATILE_STATUS,
         .power = 0,
         .type = TYPE_NORMAL,
-        .pp = 5,
+        .pp = 3,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -3957,7 +3956,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "An attack using\nbubbles. "
             "May lower\nthe foe's Speed."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 40 : 20,
+        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 35 : 20,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 30,
@@ -6777,7 +6776,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Traps and hurts\nthe foe in "
             "a\nwhirlpool for\n"BINDING_TURNS" turns."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 35 : 15,
+        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 45 : 15,
         .type = TYPE_WATER,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 100,
         .pp = 15,
@@ -7079,8 +7078,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_NON_VOLATILE_STATUS,
         .power = 0,
         .type = TYPE_FIRE,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 85 : 75,
-        .pp = 15,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 100 : 100,
+        .pp = 3,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -7860,8 +7859,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Dive"),
         .description = COMPOUND_STRING(
-            "Dives underwater\nthe first "
-            "turn and\nstrikes next turn."),
+            "Dives underwater,\n"
+            "then strikes."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 60 : 60,
         .type = TYPE_WATER,
@@ -8547,9 +8546,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Stops the foe from\nmoving "
             "with rocks\nand cuts Speed."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 60 : 50,
+        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 50 : 50,
         .type = TYPE_ROCK,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 95 : 80,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 100 : 80,
         .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 15 : 10,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -9126,8 +9125,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Bounce"),
         .description = COMPOUND_STRING(
-            "Bounces up, then\ndown the "
-            "next\nturn. May\nparalyze."),
+            "Bounces up, then strikes.\n"
+            "May paralyze."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FLYING,
@@ -14666,7 +14665,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_PHANTOM_FORCE] =
     {
         .name = COMPOUND_STRING("Phantom Force"),
-        .description = sShadowForceDescription,
+        .description = COMPOUND_STRING(
+            "Disappears,\nthen strikes."),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_GHOST,

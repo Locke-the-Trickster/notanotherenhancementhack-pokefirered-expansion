@@ -38,8 +38,8 @@
       "x": 5,
       "y": 30,
       "elevation": 3,
-      "item": "ITEM_FOCUS_BAND",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_FOCUS_BAND",
+      "item": "ITEM_QUICK_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_QUICK_BALL",
       "quantity": 1,
       "underfoot": false
     },

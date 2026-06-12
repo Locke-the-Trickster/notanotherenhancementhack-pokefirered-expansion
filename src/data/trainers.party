@@ -176,7 +176,7 @@ Double Battle: No
 AI: Smart Trainer
 
 Rattata
-Ability: Adaptability
+Ability: Guts
 Level: 17
 Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
@@ -1425,7 +1425,7 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Sweet Kiss
 
 Zigzagoon
-Ability: Pickpocket
+Ability: Fur Coat
 Level: 16
 Careful Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
@@ -1964,7 +1964,7 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Rage Fist
 
 Sneasel @ Dread Plate
-Ability: Pickpocket
+Ability: Keen Eye
 Level: 24
 Jolly Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
@@ -2397,7 +2397,7 @@ AI: Smart Trainer
 
 Sudowoodo @ Oran Berry
 Ability: Solid Rock
-Level: 13
+Level: 12
 Careful Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Rock Throw
@@ -2437,7 +2437,7 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 Aron @ Oran Berry
 Ability: Sturdy
-Level: 13
+Level: 12
 Impish Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Rock Tomb
@@ -2447,7 +2447,7 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 Nosepass @ Oran Berry
 Ability: Sturdy
-Level: 14
+Level: 13
 Careful Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Thunder Wave
@@ -2495,7 +2495,7 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Fling
 
 Sudowoodo @ Oran Berry
-Ability: Sturdy
+Ability: Solid Rock
 Level: 19
 Lonely Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
@@ -2934,7 +2934,7 @@ Double Battle: No
 AI: Smart Trainer
 
 Nuzleaf @ Oran Berry
-Ability: Pickpocket
+Ability: Leaf Guard
 Level: 23
 Quiet Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
@@ -7951,7 +7951,7 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Payback
 
 Nuzleaf
-Ability: Pickpocket
+Ability: Early Bird
 Level: 16
 Relaxed Nature
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
@@ -10216,7 +10216,7 @@ Level: 20
 Adamant Nature
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Whirlpool
-- Bounce
+- Aerial Ace
 - Flail
 - Leer
 

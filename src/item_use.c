@@ -443,6 +443,7 @@ static void Task_AccessPokemonBoxLink(u8 taskId)
     if (FlagGet(FLAG_SYS_GAUNTLET))
     {
         PrintNotTheTimeToUseThat(taskId, usingRegistered);
+        return;
     }
     else
     {

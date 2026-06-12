@@ -507,9 +507,6 @@ PalletTown_EventScript_MomItems::
 	checkitemspace ITEM_REPELLENT
 	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_NoRoomforItems
 	additem ITEM_REPELLENT
-	checkitemspace ITEM_RELEARNER_KIT
-	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_NoRoomforItems
-	additem ITEM_RELEARNER_KIT
 	checkitemspace ITEM_POKEMON_BOX_LINK
 	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_NoRoomforItems
 	additem ITEM_POKEMON_BOX_LINK

@@ -38,5 +38,16 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 3,
+      "elevation": 0,
+      "item": "ITEM_CHESTO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_HIDDEN_MEADOW_CHESTO_BERRY",
+      "quantity": 1,
+      "underfoot": false
+    }
+  ]
 }

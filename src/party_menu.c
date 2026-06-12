@@ -3220,8 +3220,9 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, CURSOR_OPTION_SUMMARY);
-
+//Move relearner will not appear in the party menu after Pokemon select while in a gauntlet
     if (P_PARTY_MOVE_RELEARNER
+     && !FlagGet(FLAG_SYS_GAUNTLET)
      && GetMonData(&mons[slotId], MON_DATA_SPECIES)
      && CanBoxMonRelearnAnyMove(&mons[slotId].box))
     {

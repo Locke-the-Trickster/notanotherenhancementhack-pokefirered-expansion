@@ -1106,9 +1106,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_GLUTTONY, ABILITY_PICKPOCKET, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_PICKPOCKET, ABILITY_FUR_COAT, ABILITY_QUICK_FEET },
     #else
-        .abilities = { ABILITY_GLUTTONY, ABILITY_PICKPOCKET, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_PICKPOCKET, ABILITY_FUR_COAT, ABILITY_GLUTTONY },
     #endif
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Zigzagoon"),
@@ -1184,9 +1184,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_GLUTTONY, ABILITY_PICKPOCKET, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_PICKPOCKET, ABILITY_FUR_COAT, ABILITY_QUICK_FEET },
     #else
-        .abilities = { ABILITY_GLUTTONY, ABILITY_PICKPOCKET, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_PICKPOCKET, ABILITY_FUR_COAT, ABILITY_GLUTTONY },
     #endif
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Linoone"),
@@ -1238,6 +1238,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .levelUpLearnset = sLinooneLevelUpLearnset,
         .teachableLearnset = sLinooneTeachableLearnset,
         .formSpeciesIdTable = sLinooneFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_OBSTAGOON}),
     },
 
 #if P_GALARIAN_FORMS
@@ -2121,7 +2122,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_PICKPOCKET, ABILITY_EARLY_BIRD, ABILITY_CHLOROPHYLL },
+        .abilities = { ABILITY_LEAF_GUARD, ABILITY_EARLY_BIRD, ABILITY_CHLOROPHYLL },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Seedot"),
         .cryId = CRY_SEEDOT,
@@ -2197,7 +2198,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_PICKPOCKET, ABILITY_EARLY_BIRD, ABILITY_CHLOROPHYLL },
+        .abilities = { ABILITY_LEAF_GUARD, ABILITY_EARLY_BIRD, ABILITY_CHLOROPHYLL },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Nuzleaf"),
         .cryId = CRY_NUZLEAF,
@@ -2292,9 +2293,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
     #if P_UPDATED_ABILITIES >= GEN_9
-        .abilities = { ABILITY_PICKPOCKET, ABILITY_WIND_RIDER, ABILITY_CHLOROPHYLL },
+        .abilities = { ABILITY_GALE_WINGS, ABILITY_WIND_RIDER, ABILITY_PICKPOCKET },
     #else
-        .abilities = { ABILITY_PICKPOCKET, ABILITY_WIND_RIDER, ABILITY_CHLOROPHYLL },
+        .abilities = { ABILITY_GALE_WINGS, ABILITY_WIND_RIDER, ABILITY_CHLOROPHYLL },
     #endif
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Shiftry"),

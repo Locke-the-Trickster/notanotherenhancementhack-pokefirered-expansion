@@ -227,6 +227,16 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_GRIP_CLAW",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 38,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_SUN_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_4_SUN_STONE",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

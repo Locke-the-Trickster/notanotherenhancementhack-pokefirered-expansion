@@ -19,15 +19,3 @@ PewterCity_Mart_EventScript_Clerk::
 	msgbox Text_PleaseComeAgain
 	release
 	end
-
-	.align 2
-PewterCity_Mart_Items::
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_ORAN_BERRY
-	.2byte ITEM_PECHA_BERRY
-	.2byte ITEM_CHERI_BERRY
-	.2byte ITEM_CHESTO_BERRY
-	.2byte ITEM_RAWST_BERRY
-	.2byte ITEM_NONE
-	release
-	end

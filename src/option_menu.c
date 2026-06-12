@@ -1,4 +1,5 @@
 #include "global.h"
+#include "event_data.h"
 #include "bg.h"
 #include "field_fadetransition.h"
 #include "gpu_regs.h"
@@ -24,9 +25,13 @@ enum
     MENUITEM_SOUND,
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
+    MENUITEM_LEVELCAP,
     MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
+
+//New definitions
+#define OPTIONS_VISIBLE_ROWS 7
 
 // Window Ids
 enum
@@ -40,6 +45,7 @@ struct OptionMenu
 {
     /*0x00*/ u16 option[MENUITEM_COUNT];
     /*0x0E*/ u16 cursorPos;
+             u16 scrollOffset;
     /*0x10*/ u8 loadState;
     /*0x11*/ u8 state;
     /*0x12*/ u8 loadPaletteState;
@@ -134,7 +140,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 3, 10, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 3, 10, 2, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -144,6 +150,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_SOUND]       = COMPOUND_STRING("SOUND"),
     [MENUITEM_BUTTONMODE]  = COMPOUND_STRING("BUTTON MODE"),
     [MENUITEM_FRAMETYPE]   = COMPOUND_STRING("FRAME"),
+    [MENUITEM_LEVELCAP]    = COMPOUND_STRING("LEVEL CAP"),
     [MENUITEM_CANCEL]      = gText_Cancel,
 };
 
@@ -179,6 +186,12 @@ static const u8 *const sButtonTypeOptions[] =
 	COMPOUND_STRING("L=A"),
 };
 
+static const u8 *const sLevelCapOptions[] =
+{
+	COMPOUND_STRING("DISABLED"),
+    COMPOUND_STRING("ENABLED"),
+};
+
 static const u8 sOptionMenuPickSwitchCancelTextColor[] = {TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
 static const u8 sOptionMenuTextColor[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_RED, TEXT_COLOR_RED};
 
@@ -209,12 +222,14 @@ void CB2_InitOptionMenu(void)
     sOptionMenuPtr->loadPaletteState = 0;
     sOptionMenuPtr->state = 0;
     sOptionMenuPtr->cursorPos = 0;
+    sOptionMenuPtr->scrollOffset = 0;
     sOptionMenuPtr->option[MENUITEM_TEXTSPEED] = gSaveBlock2Ptr->optionsTextSpeed;
     sOptionMenuPtr->option[MENUITEM_BATTLESCENE] = gSaveBlock2Ptr->optionsBattleSceneOff;
     sOptionMenuPtr->option[MENUITEM_BATTLESTYLE] = gSaveBlock2Ptr->optionsBattleStyle;
     sOptionMenuPtr->option[MENUITEM_SOUND] = gSaveBlock2Ptr->optionsSound;
     sOptionMenuPtr->option[MENUITEM_BUTTONMODE] = gSaveBlock2Ptr->optionsButtonMode;
     sOptionMenuPtr->option[MENUITEM_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
+    sOptionMenuPtr->option[MENUITEM_LEVELCAP] = FlagGet(FLAG_LEVEL_CAP_TOGGLE);
 
     for (i = 0; i < MENUITEM_COUNT - 1; i++)
     {
@@ -265,8 +280,13 @@ static void CB2_OptionMenu(void)
         LoadOptionMenuItemNames();
         break;
     case 7:
-        for (i = 0; i < MENUITEM_COUNT; i++)
+        /*for (i = 0; i < MENUITEM_COUNT; i++)
             BufferOptionMenuString(i);
+        break;*/
+        for (i = sOptionMenuPtr->scrollOffset; i < MENUITEM_COUNT && i < sOptionMenuPtr->scrollOffset + OPTIONS_VISIBLE_ROWS; i++)
+        {
+            BufferOptionMenuString(i);
+        }
         break;
     case 8:
         UpdateSettingSelectionDisplay(sOptionMenuPtr->cursorPos);
@@ -389,10 +409,25 @@ static void Task_OptionMenu(u8 taskId)
             BufferOptionMenuString(sOptionMenuPtr->cursorPos);
             break;
         case 3:
+        {
+            /*UpdateSettingSelectionDisplay(sOptionMenuPtr->cursorPos);
+            break;*/
+            u8 i;
+
+            LoadOptionMenuItemNames();
+
+            for (i = sOptionMenuPtr->scrollOffset; i < MENUITEM_COUNT && i < sOptionMenuPtr->scrollOffset + OPTIONS_VISIBLE_ROWS; i++)
+            {
+                BufferOptionMenuString(i);
+            }
             UpdateSettingSelectionDisplay(sOptionMenuPtr->cursorPos);
-            break;
+            break; 
+        }
         case 4:
             BufferOptionMenuString(sOptionMenuPtr->cursorPos);
+            break;
+        case 5:
+            UpdateSettingSelectionDisplay(sOptionMenuPtr->cursorPos);
             break;
         }
         break;
@@ -415,6 +450,8 @@ static u8 OptionMenu_ProcessInput(void)
 {
     u16 current;
     u16 *curr;
+    u16 oldScrollOffset;
+    oldScrollOffset = sOptionMenuPtr->scrollOffset;
     if (JOY_REPEAT(DPAD_RIGHT))
     {
         current = sOptionMenuPtr->option[(sOptionMenuPtr->cursorPos)];
@@ -440,21 +477,65 @@ static u8 OptionMenu_ProcessInput(void)
         else
             return 4;
     }
-    else if (JOY_REPEAT(DPAD_UP))
+    /*else if (JOY_REPEAT(DPAD_UP))
     {
         if (sOptionMenuPtr->cursorPos == MENUITEM_TEXTSPEED)
             sOptionMenuPtr->cursorPos = MENUITEM_CANCEL;
         else
             sOptionMenuPtr->cursorPos = sOptionMenuPtr->cursorPos - 1;
         return 3;
+    }*/
+    else if (JOY_REPEAT(DPAD_UP))
+    {
+        if (sOptionMenuPtr->cursorPos == 0)
+        {
+            sOptionMenuPtr->cursorPos = MENUITEM_CANCEL;
+            sOptionMenuPtr->scrollOffset = MENUITEM_CANCEL - OPTIONS_VISIBLE_ROWS + 1;
+        }
+        else
+        {
+            sOptionMenuPtr->cursorPos--;
+            if (sOptionMenuPtr->cursorPos < sOptionMenuPtr->scrollOffset)
+                sOptionMenuPtr->scrollOffset--;
+        } 
+        if (oldScrollOffset != sOptionMenuPtr->scrollOffset)
+        {
+            return 3;
+        }
+        else
+        {
+            return 5;
+        }  
     }
-    else if (JOY_REPEAT(DPAD_DOWN))
+    /*else if (JOY_REPEAT(DPAD_DOWN))
     {
         if (sOptionMenuPtr->cursorPos == MENUITEM_CANCEL)
             sOptionMenuPtr->cursorPos = MENUITEM_TEXTSPEED;
         else
             sOptionMenuPtr->cursorPos = sOptionMenuPtr->cursorPos + 1;
         return 3;
+    }*/
+   else if (JOY_REPEAT(DPAD_DOWN))
+    {
+        if (sOptionMenuPtr->cursorPos == MENUITEM_CANCEL)
+        {
+            sOptionMenuPtr->cursorPos = 0;
+            sOptionMenuPtr->scrollOffset = 0;
+        }
+        else
+        {
+            sOptionMenuPtr->cursorPos++;
+            if (sOptionMenuPtr->cursorPos >= sOptionMenuPtr->scrollOffset + OPTIONS_VISIBLE_ROWS)
+                sOptionMenuPtr->scrollOffset++;
+        }
+        if (oldScrollOffset != sOptionMenuPtr->scrollOffset)
+        {
+            return 3;
+        }
+        else
+        {
+            return 5;
+        }
     }
     else if (JOY_NEW(B_BUTTON) || JOY_NEW(A_BUTTON))
     {
@@ -472,10 +553,16 @@ static void BufferOptionMenuString(u8 selection)
     u8 buf[12];
     u8 dst[3];
     u8 x, y;
+    s16 row;
 
     memcpy(dst, sOptionMenuTextColor, 3);
     x = 0x82;
-    y = ((GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) - 1) * selection) + 2;
+    //y = ((GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) - 1) * selection) + 2;
+    row = selection - sOptionMenuPtr->scrollOffset;
+    if (row < 0 || row >= OPTIONS_VISIBLE_ROWS)
+        return;
+    y = row * (GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) - 1) + 2;
+
     FillWindowPixelRect(1, 1, x, y, 0x46, GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT));
 
     switch (selection)
@@ -501,6 +588,9 @@ static void BufferOptionMenuString(u8 selection)
         StringAppendN(str, buf, 3);
         AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, str);
         break;
+    case MENUITEM_LEVELCAP:
+        AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sLevelCapOptions[sOptionMenuPtr->option[selection]]);
+        break;
     default:
         break;
     }
@@ -519,6 +609,10 @@ static void CloseAndSaveOptionMenu(u8 taskId)
     gSaveBlock2Ptr->optionsSound = sOptionMenuPtr->option[MENUITEM_SOUND];
     gSaveBlock2Ptr->optionsButtonMode = sOptionMenuPtr->option[MENUITEM_BUTTONMODE];
     gSaveBlock2Ptr->optionsWindowFrameType = sOptionMenuPtr->option[MENUITEM_FRAMETYPE];
+    if (sOptionMenuPtr->option[MENUITEM_LEVELCAP] == 1)
+        FlagSet(FLAG_LEVEL_CAP_TOGGLE);
+    else
+        FlagClear(FLAG_LEVEL_CAP_TOGGLE);
     SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
     FREE_AND_SET_NULL(sOptionMenuPtr);
     DestroyTask(taskId);
@@ -536,7 +630,7 @@ static void DrawOptionMenuBg(void)
 {
     u8 h;
     h = 2;
-
+    
     FillBgTilemapBufferRect(1, 0x1B3, 1, 2, 1, 1, 3);
     FillBgTilemapBufferRect(1, 0x1B4, 2, 2, 0x1B, 1, 3);
     FillBgTilemapBufferRect(1, 0x1B5, 0x1C, 2, 1, 1, 3);
@@ -559,20 +653,66 @@ static void DrawOptionMenuBg(void)
 static void LoadOptionMenuItemNames(void)
 {
     u8 i;
+    u8 row;
+
+    FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(1));
+
+    for (i = sOptionMenuPtr->scrollOffset, row = 0;
+         i < MENUITEM_COUNT && row < OPTIONS_VISIBLE_ROWS;
+         i++, row++)
+    {
+        AddTextPrinterParameterized(
+            WIN_OPTIONS,
+            FONT_NORMAL,
+            sOptionMenuItemsNames[i],
+            8,
+            row * (GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) - 1) + 2,
+            TEXT_SKIP_DRAW,
+            NULL
+        );
+    }
+
+    PutWindowTilemap(WIN_OPTIONS);
+    CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+}
+/*static void LoadOptionMenuItemNames(void)
+{
+    u8 i;
 
     FillWindowPixelBuffer(1, PIXEL_FILL(1));
     for (i = 0; i < MENUITEM_COUNT; i++)
     {
         AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, sOptionMenuItemsNames[i], 8, (u8)((i * (GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT))) + 2) - i, TEXT_SKIP_DRAW, NULL);
     }
-}
+}*/
 
-static void UpdateSettingSelectionDisplay(u16 selection)
+/*static void UpdateSettingSelectionDisplay(u16 selection)
 {
     u16 maxLetterHeight, y;
-
+    
     maxLetterHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT);
     y = selection * (maxLetterHeight - 1) + 0x3A;
     SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(y, y + maxLetterHeight));
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(0x10, 0xE0));
+}*/
+
+static void UpdateSettingSelectionDisplay(u16 selection)
+{
+    u16 maxLetterHeight;
+    s16 row;
+    u16 y;
+
+    maxLetterHeight =
+        GetFontAttribute(FONT_NORMAL,
+                         FONTATTR_MAX_LETTER_HEIGHT);
+
+    row = selection - sOptionMenuPtr->scrollOffset;
+
+    y = row * (maxLetterHeight - 1) + 0x3A;
+
+    SetGpuReg(REG_OFFSET_WIN0V,
+              WIN_RANGE(y, y + maxLetterHeight));
+
+    SetGpuReg(REG_OFFSET_WIN0H,
+              WIN_RANGE(0x10, 0xE0));
 }
